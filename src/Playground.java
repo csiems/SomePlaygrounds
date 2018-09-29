@@ -10,8 +10,10 @@ public class Playground {
     }
 
     public void addPlaySite(PlaySite playSite) {
-        playSites.add(playSite);
-        capacity += playSite.getCapacity();
+        if (!playSites.contains(playSite)) {
+            playSites.add(playSite);
+            capacity += playSite.getCapacity();
+        }
     }
 
     public int getCapacity() {
