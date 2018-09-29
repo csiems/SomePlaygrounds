@@ -1,33 +1,34 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public abstract class PlaySite {
 
     protected int capacity = 0;
-    protected ArrayList<Kid> kidsOnSite = new ArrayList<>();
-    protected ArrayList<Kid> kidsOnQueue = new ArrayList<>();
+    protected Deque<Kid> kidsOnSite = new ArrayDeque<>();
+    protected Deque<Kid> kidsOnQueue = new ArrayDeque<>();
 
     public int getCapacity() {
         return capacity;
     }
 
-    public ArrayList<Kid> getKidsOnSite() {
+    public Deque<Kid> getKidsOnSite() {
         return kidsOnSite;
     }
 
-    public ArrayList<Kid> getKidsOnQueue() {
+    public Deque<Kid> getKidsOnQueue() {
         return kidsOnQueue;
     }
 
     public int addKid(Kid kid) {
-        if (kidsOnSite.size() < capacity) {
-            // if space is available add kid to site
-            kidsOnSite.add(kid);
+        if (kidsOnSite.size() < capacity && !kidsOnSite.contains(kid)) {
+            // if space is available add kid to site if kid not already there
+            kidsOnSite.addLast(kid);
+            kid.addSiteVisit(this);
         } else if (!kid.acceptsQueue()) {
             // if no space and kid rejects queue return -1
             return -1;
         } else if (kid.acceptsQueue() && !kidsOnQueue.contains(kid)) {
             // if kid accepts queue and is not in queue already, add to queue
-            kidsOnQueue.add(kid);
+            kidsOnQueue.addLast(kid);
         }
         return kidsOnQueue.size();
     }
@@ -35,11 +36,12 @@ public abstract class PlaySite {
     public int removeKid(Kid kid) {
         if (kidsOnSite.contains(kid)) {
             kidsOnSite.remove(kid);
-            // lead child in queue gets promoted to site if a kid leaves
+            kid.exitSite();
             if (kidsOnQueue.size() > 0) {
-                Kid firstKidInQueue = kidsOnQueue.get(0);
-                kidsOnSite.add(firstKidInQueue);
-                kidsOnQueue.remove(firstKidInQueue);
+                // lead child in queue gets promoted to site if a kid leaves
+                Kid firstInQueue = kidsOnQueue.removeFirst();
+                kidsOnSite.addLast(firstInQueue);
+                firstInQueue.addSiteVisit(this);
             }
         } else if (kidsOnQueue.contains(kid)) {
             kidsOnQueue.remove(kid);
