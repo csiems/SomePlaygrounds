@@ -18,6 +18,14 @@ public class Kid {
         return acceptsQueue;
     }
 
+    public Visit getCurrentVisit() {
+        return currentVisit;
+    }
+
+    public ArrayList<Visit> getVisits() {
+        return visits;
+    }
+
     public void addSiteVisit(PlaySite site) throws UnsupportedOperationException {
         if (currentVisit == null) {
             currentVisit = new Visit(site);

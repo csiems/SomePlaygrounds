@@ -5,6 +5,7 @@ public abstract class PlaySite {
     protected int capacity = 0;
     protected Deque<Kid> kidsOnSite = new ArrayDeque<>();
     protected Deque<Kid> kidsOnQueue = new ArrayDeque<>();
+    protected Map<Long, Kid> historicalVisitors = new HashMap<>();
 
     public int getCapacity() {
         return capacity;
@@ -18,10 +19,21 @@ public abstract class PlaySite {
         return kidsOnQueue;
     }
 
+    public Map<Long, Kid> getHistoricalVisitors() {
+        return historicalVisitors;
+    }
+
     public int addKid(Kid kid) {
         if (kidsOnSite.size() < capacity && !kidsOnSite.contains(kid)) {
             // if space is available add kid to site if kid not already there
             kidsOnSite.addLast(kid);
+            // add this visitor to site historical record
+            if (historicalVisitors.get(kid.getCurrentVisit().getTimeEntered().getTime()) == null) {
+                historicalVisitors.put(kid.getCurrentVisit().getTimeEntered().getTime(), kid);
+            } else {
+                historicalVisitors.put(kid.getCurrentVisit().getTimeEntered().getTime() + 1, kid);
+            }
+            // update site visit for kid as well
             kid.addSiteVisit(this);
         } else if (!kid.acceptsQueue()) {
             // if no space and kid rejects queue return -1
