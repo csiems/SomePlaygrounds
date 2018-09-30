@@ -77,23 +77,21 @@ public class Playground {
         return listedKids;
     }
 
-    public List<Kid> getVisitorsAsList(long start, long end) {
+    public List<Kid> getVisitorsAsList(long entryStart, long entryEnd) {
         Map<Long, List<Kid>> visitors = getVisitors();
         List<Kid> filteredVisitorsList = new ArrayList<>();
 
         for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
-            if (entry.getKey() > end) {
+            if (entry.getKey() > entryEnd) {
                 return filteredVisitorsList;
             }
 
-            if (entry.getKey() >= start) {
+            if (entry.getKey() >= entryStart) {
                 filteredVisitorsList.addAll(entry.getValue());
             }
         }
         return filteredVisitorsList;
     }
-
-
 
     /**
      * Iterates through a playground's play sites, grabs their current
@@ -101,32 +99,17 @@ public class Playground {
      * @return A map of current visitors to a playground sorted by
      *         entry time.
      */
-    public Map<Long, Kid> getCurrentVisitors() {
-        Map<Long, Kid> sortedMap = new TreeMap<>();
+    public List<Kid> getCurrentVisitors() {
+        List<Kid> historicalVisitors = getVisitorsAsList();
+        List<Kid> currentVisitors = new ArrayList<>();
 
-        for (PlaySite site : playSites) {
-            Iterator<Kid> currentOnSite = site.getKidsOnSite().iterator();
-            while (currentOnSite.hasNext()) {
-                Kid value = currentOnSite.next();
-                Long key = value.getCurrentVisit().getTimeEntered().getTime();
-                if (sortedMap.get(key) == null) {
-                    sortedMap.put(key, value);
-                } else {
-                    sortedMap.put(key + 1, value);
-                }
-            }
-            Iterator<Kid> currentInQueue = site.getKidsOnQueue().iterator();
-            while (currentInQueue.hasNext()) {
-                Kid value = currentInQueue.next();
-                Long key = value.getCurrentVisit().getTimeEntered().getTime();
-                if (sortedMap.get(key) == null) {
-                    sortedMap.put(key, value);
-                } else {
-                    sortedMap.put(key + 1, value);
-                }
+        for (Kid kid : historicalVisitors) {
+            if (kid.getCurrentVisit() != null) {
+                currentVisitors.add(kid);
             }
         }
-        return sortedMap;
+
+        return currentVisitors;
     }
 
 }

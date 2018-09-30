@@ -37,4 +37,10 @@ public class DoubleSwingSite extends PlaySite {
             numberOfSwings = 0;
         }
     }
+
+    @Override
+    public int getCapacity() {
+        // Each double swing in the site can hold two children
+        return numberOfSwings * 2;
+    }
 }
