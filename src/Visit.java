@@ -2,16 +2,31 @@ import java.util.Date;
 
 public class Visit {
     private PlaySite site;
+    private Status status;
     private Date timeEntered;
     private Date timeExited;
 
-    public Visit(PlaySite site) {
+    public enum Status {
+        onsite,
+        onqueue;
+    }
+
+    public Visit(PlaySite site, Status status) {
         this.site = site;
+        this.status = status;
         this.timeEntered = new Date();
     }
 
     public PlaySite getPlaySite() {
         return site;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 
     public Date getTimeEntered() {
@@ -37,5 +52,15 @@ public class Visit {
         } else {
             return -1;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Visit{" +
+                "site=" + site +
+                ", status='" + status + '\'' +
+                ", timeEntered=" + timeEntered +
+                ", timeExited=" + timeExited +
+                '}';
     }
 }

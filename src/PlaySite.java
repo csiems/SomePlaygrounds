@@ -5,7 +5,7 @@ public abstract class PlaySite {
     protected int capacity = 0;
     protected Deque<Kid> kidsOnSite = new ArrayDeque<>();
     protected Deque<Kid> kidsOnQueue = new ArrayDeque<>();
-    protected Map<Long, Kid> historicalVisitors = new HashMap<>();
+    protected Map<Long, List<Kid>> historicalVisitors = new HashMap<>();
 
     public int getCapacity() {
         return capacity;
@@ -19,28 +19,36 @@ public abstract class PlaySite {
         return kidsOnQueue;
     }
 
-    public Map<Long, Kid> getHistoricalVisitors() {
+    public Map<Long, List<Kid>> getHistoricalVisitors() {
         return historicalVisitors;
     }
 
     public int addKid(Kid kid) {
-        if (kidsOnSite.size() < capacity && !kidsOnSite.contains(kid)) {
+        if (kidsOnSite.size() < capacity && !kidsOnSite.contains(kid) && !kidsOnQueue.contains(kid)) {
             // if space is available add kid to site if kid not already there
             kidsOnSite.addLast(kid);
-            // add this visitor to site historical record
-            if (historicalVisitors.get(kid.getCurrentVisit().getTimeEntered().getTime()) == null) {
-                historicalVisitors.put(kid.getCurrentVisit().getTimeEntered().getTime(), kid);
-            } else {
-                historicalVisitors.put(kid.getCurrentVisit().getTimeEntered().getTime() + 1, kid);
-            }
             // update site visit for kid as well
-            kid.addSiteVisit(this);
+            kid.addSiteVisit(this, Visit.Status.onsite);
         } else if (!kid.acceptsQueue()) {
             // if no space and kid rejects queue return -1
             return -1;
         } else if (kid.acceptsQueue() && !kidsOnQueue.contains(kid)) {
             // if kid accepts queue and is not in queue already, add to queue
             kidsOnQueue.addLast(kid);
+            kid.addSiteVisit(this, Visit.Status.onqueue);
+        }
+
+        // add this visitor to site historical record
+        Long currentKey = kid.getCurrentVisit().getTimeEntered().getTime();
+        if (!historicalVisitors.containsKey(currentKey)) {
+            List<Kid> newKidList = new ArrayList<>();
+            newKidList.add(kid);
+            historicalVisitors.put(currentKey, newKidList);
+        } else {
+            // if key already exists, get existing value and add new kid to end of it
+            List<Kid> existingKidList = historicalVisitors.get(kid.getCurrentVisit().getTimeEntered().getTime());
+            existingKidList.add(kid);
+            historicalVisitors.put(currentKey, existingKidList);
         }
         return kidsOnQueue.size();
     }
@@ -53,7 +61,6 @@ public abstract class PlaySite {
                 // lead child in queue gets promoted to site if a kid leaves
                 Kid firstInQueue = kidsOnQueue.removeFirst();
                 kidsOnSite.addLast(firstInQueue);
-                firstInQueue.addSiteVisit(this);
             }
         } else if (kidsOnQueue.contains(kid)) {
             kidsOnQueue.remove(kid);

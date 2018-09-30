@@ -16,6 +16,13 @@ public class Playground {
         }
     }
 
+    public void removePlaySite(PlaySite playSite) {
+        if (playSites.contains(playSite)) {
+            playSites.remove(playSite);
+            capacity -= playSite.getCapacity();
+        }
+    }
+
     public int getCapacity() {
         return capacity;
     }
@@ -25,35 +32,68 @@ public class Playground {
      * a playground and adds Kid to a map sorted by time of entry.
      * @return Map of visitors sorted by time of entry
      */
-    public Map<Long, Kid> getAllHistoricalVisitors() {
-        Map<Long, Kid> sortedMap = new TreeMap<>();
+    public Map<Long, List<Kid>> getVisitors() {
+        Map<Long, List<Kid>> sortedMap = new TreeMap<>();
 
         for (PlaySite site : playSites) {
-            Map<Long, Kid> visitors = site.getHistoricalVisitors();
-            for (Map.Entry<Long, Kid> entry : visitors.entrySet()) {
-                sortedMap.put(entry.getKey(), entry.getValue());
-            }
-        }
-        return sortedMap;
-    }
-
-
-    public Map<Long, Kid> getHistoricalVisitors(long start, long end) {
-        Map<Long, Kid> sortedMap = new TreeMap<>();
-
-        for (PlaySite site : playSites) {
-            Map<Long, Kid> visitors = site.getHistoricalVisitors();
-            for (Map.Entry<Long, Kid> entry : visitors.entrySet()) {
-                for (Visit visit : entry.getValue().getVisits()) {
-                    if ((visit.getTimeEntered().getTime() >= start && visit.getTimeEntered().getTime() <= end) ||
-                        (visit.getTimeExited().getTime() >= start && visit.getTimeExited().getTime() <= end)) {
-                        sortedMap.put(entry.getKey(), entry.getValue());
-                    }
+            Map<Long, List<Kid>> visitors = site.getHistoricalVisitors();
+            for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
+                Long currentKey = entry.getKey();
+                if(!sortedMap.containsKey(currentKey)) {
+                    sortedMap.put(currentKey, entry.getValue());
+                } else {
+                    List<Kid> existingValue = sortedMap.get(currentKey);
+                    existingValue.addAll(entry.getValue());
+                    sortedMap.put(currentKey, existingValue);
                 }
             }
         }
         return sortedMap;
     }
+
+    public Map<Long, List<Kid>> getVisitors(long start, long end) {
+        Map<Long, List<Kid>> visitors = getVisitors();
+        Map<Long, List<Kid>> filteredVisitors = new TreeMap<>();
+
+        for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
+            if (entry.getKey() >= start) {
+                filteredVisitors.put(entry.getKey(), entry.getValue());
+            }
+
+            if (entry.getKey() > end) {
+                return filteredVisitors;
+            }
+        }
+        return filteredVisitors;
+    }
+
+    public List<Kid> getVisitorsAsList() {
+        List<Kid> listedKids = new ArrayList<>();
+        Map<Long, List<Kid>> visitors = getVisitors();
+
+        for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
+            listedKids.addAll(entry.getValue());
+        }
+        return listedKids;
+    }
+
+    public List<Kid> getVisitorsAsList(long start, long end) {
+        Map<Long, List<Kid>> visitors = getVisitors();
+        List<Kid> filteredVisitorsList = new ArrayList<>();
+
+        for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
+            if (entry.getKey() > end) {
+                return filteredVisitorsList;
+            }
+
+            if (entry.getKey() >= start) {
+                filteredVisitorsList.addAll(entry.getValue());
+            }
+        }
+        return filteredVisitorsList;
+    }
+
+
 
     /**
      * Iterates through a playground's play sites, grabs their current
