@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="291f9340-bd5e-4342-a25e-766bb301bd68" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SomePlaygrounds/Kid.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SomePlaygrounds/Kid.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SomePlaygrounds/PlaySite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SomePlaygrounds/PlaySite.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SomePlaygrounds/Playground.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SomePlaygrounds/Playground.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tests/KidTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tests/KidTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tests/PlayGroundTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tests/PlayGroundTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tests/PlaySiteTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tests/PlaySiteTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/tests/VisitTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tests/VisitTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Kid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PlaySite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PlaySite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Playground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Playground.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Visit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Visit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/KidTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/KidTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/PlayGroundTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/PlayGroundTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/PlaySiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/PlaySiteTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/VisitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/VisitTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,14 +29,15 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/SomePlaygrounds$VisitTest.ic" NAME="VisitTest Coverage Results" MODIFIED="1538250086254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$DoubleSwingSiteTest.ic" NAME="DoubleSwingSiteTest Coverage Results" MODIFIED="1538252067958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SomePlaygrounds$PlayGroundTest.ic" NAME="PlayGroundTest Coverage Results" MODIFIED="1538326394673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$KidTest.ic" NAME="KidTest Coverage Results" MODIFIED="1538251352186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests.ic" NAME="All in tests Coverage Results" MODIFIED="1538254224061" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests.ic" NAME="All in tests Coverage Results" MODIFIED="1538326448318" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageOptionsProvider">
     <option name="myAddOrReplace" value="0" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="146" />
+    <option name="myElementSize" value="149" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-2135892702">
@@ -36,12 +50,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="9325" />
+          <entry key="java" value="12995" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9325" />
+          <entry key="JAVA" value="12995" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -50,7 +64,7 @@
           <entry key="class" value="1" />
           <entry key="groovy" value="1" />
           <entry key="iml" value="1" />
-          <entry key="java" value="34" />
+          <entry key="java" value="47" />
           <entry key="xml" value="2" />
         </counts>
       </usages-collector>
@@ -59,7 +73,7 @@
           <entry key="CLASS" value="1" />
           <entry key="Groovy" value="1" />
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="34" />
+          <entry key="JAVA" value="47" />
           <entry key="XML" value="2" />
         </counts>
       </usages-collector>
@@ -70,20 +84,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Playground.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Kid.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+            <state relative-caret-position="300">
+              <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
               <folding>
-                <element signature="e#575#576#0" expanded="true" />
-                <element signature="e#603#604#0" expanded="true" />
+                <element signature="e#444#445#0" expanded="true" />
+                <element signature="e#475#476#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -92,11 +97,89 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PlaySite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+            <state relative-caret-position="195">
+              <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
               <folding>
-                <element signature="e#539#540#0" expanded="true" />
                 <element signature="e#579#580#0" expanded="true" />
+                <element signature="e#620#621#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Visit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding>
+                <element signature="e#681#682#0" expanded="true" />
+                <element signature="e#720#721#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/src/PlayGroundTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/src/KidTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="29" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/src/VisitTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Kid.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-186">
+              <caret line="61" selection-start-line="61" selection-end-line="61" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#601#602#0" expanded="true" />
+                <element signature="e#622#623#0" expanded="true" />
+                <element signature="e#659#660#0" expanded="true" />
+                <element signature="e#685#686#0" expanded="true" />
+                <element signature="e#726#727#0" expanded="true" />
+                <element signature="e#747#748#0" expanded="true" />
+                <element signature="e#802#803#0" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/src/PlaySiteTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="245">
+              <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -117,6 +200,7 @@
     <findStrings>
       <find>timeLeft</find>
       <find>get</find>
+      <find>System.out</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -130,29 +214,28 @@
       <list>
         <option value="$PROJECT_DIR$/src/Site.java" />
         <option value="$PROJECT_DIR$/src/Sites/DoubleSwingSite.java" />
-        <option value="$PROJECT_DIR$/src/Visit.java" />
         <option value="$PROJECT_DIR$/src/DoubleSwingSite.java" />
         <option value="$PROJECT_DIR$/src/CarouselSite.java" />
         <option value="$PROJECT_DIR$/src/BallPitSite.java" />
         <option value="$PROJECT_DIR$/src/KidTest.groovy" />
         <option value="$PROJECT_DIR$/src/KidTest.java" />
-        <option value="$PROJECT_DIR$/tests/src/KidTest.java" />
         <option value="$PROJECT_DIR$/src/VisitTest.java" />
         <option value="$PROJECT_DIR$/src/DoubleSwingSiteTest.java" />
         <option value="$PROJECT_DIR$/tests/src/DoubleSwingSiteTest.java" />
-        <option value="$PROJECT_DIR$/tests/src/PlaySiteTest.java" />
         <option value="$PROJECT_DIR$/tests/src/PlayGroundTest.java" />
         <option value="$PROJECT_DIR$/src/PlaySite.java" />
+        <option value="$PROJECT_DIR$/tests/src/KidTest.java" />
+        <option value="$PROJECT_DIR$/tests/src/VisitTest.java" />
         <option value="$PROJECT_DIR$/src/Kid.java" />
+        <option value="$PROJECT_DIR$/tests/src/PlaySiteTest.java" />
+        <option value="$PROJECT_DIR$/src/Visit.java" />
         <option value="$PROJECT_DIR$/src/Playground.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="10" />
-    <option name="y" value="23" />
-    <option name="width" value="1260" />
-    <option name="height" value="684" />
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -206,7 +289,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538257646640" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538328448769" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -249,26 +332,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VisitTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VisitTest" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="VisitTest.getPlaySite_CorrectlyDeterminesVisitSite_BallPitVisitReturnsBallPit" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="VisitTest" />
-      <option name="METHOD_NAME" value="getPlaySite_CorrectlyDeterminesVisitSite_BallPitVisitReturnsBallPit" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="All in tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tests" />
       <option name="PACKAGE_NAME" value="" />
@@ -285,20 +348,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PlayGroundTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlayGroundTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaySiteTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlaySiteTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Android JUnit.KidTest" />
-      <item itemvalue="Android JUnit.VisitTest.getPlaySite_CorrectlyDeterminesVisitSite_BallPitVisitReturnsBallPit" />
-      <item itemvalue="Android JUnit.VisitTest" />
       <item itemvalue="JUnit.DoubleSwingSiteTest" />
       <item itemvalue="JUnit.All in tests" />
+      <item itemvalue="JUnit.PlaySiteTest" />
+      <item itemvalue="JUnit.PlayGroundTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in tests" />
+        <item itemvalue="JUnit.PlayGroundTest" />
+        <item itemvalue="JUnit.PlaySiteTest" />
         <item itemvalue="JUnit.DoubleSwingSiteTest" />
         <item itemvalue="Android JUnit.KidTest" />
-        <item itemvalue="Android JUnit.VisitTest" />
-        <item itemvalue="Android JUnit.VisitTest.getPlaySite_CorrectlyDeterminesVisitSite_BallPitVisitReturnsBallPit" />
       </list>
     </recent_temporary>
   </component>
@@ -316,39 +395,48 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_tests - 2018.09.29 at 13h 28m 34s.xml">
+    <history-entry file="PlayGroundTest - 2018.09.30 at 09h 48m 13s.xml">
+      <configuration name="PlayGroundTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayGroundTest - 2018.09.30 at 09h 49m 26s.xml">
+      <configuration name="PlayGroundTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayGroundTest - 2018.09.30 at 09h 50m 31s.xml">
+      <configuration name="PlayGroundTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayGroundTest - 2018.09.30 at 09h 51m 07s.xml">
+      <configuration name="PlayGroundTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayGroundTest - 2018.09.30 at 09h 53m 17s.xml">
+      <configuration name="PlayGroundTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_tests - 2018.09.30 at 09h 54m 12s.xml">
       <configuration name="All in tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_tests - 2018.09.29 at 13h 29m 05s.xml">
+    <history-entry file="All_in_tests - 2018.09.30 at 10h 02m 54s.xml">
       <configuration name="All in tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_tests - 2018.09.29 at 13h 31m 12s.xml">
+    <history-entry file="All_in_tests - 2018.09.30 at 10h 06m 01s.xml">
       <configuration name="All in tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_tests - 2018.09.29 at 13h 39m 18s.xml">
+    <history-entry file="All_in_tests - 2018.09.30 at 10h 07m 34s.xml">
       <configuration name="All in tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="All_in_tests - 2018.09.29 at 13h 39m 34s.xml">
-      <configuration name="All in tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_tests - 2018.09.29 at 13h 42m 50s.xml">
-      <configuration name="All in tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_tests - 2018.09.29 at 13h 43m 17s.xml">
-      <configuration name="All in tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_tests - 2018.09.29 at 13h 44m 16s.xml">
-      <configuration name="All in tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_tests - 2018.09.29 at 13h 50m 28s.xml">
-      <configuration name="All in tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_tests - 2018.09.29 at 13h 50m 49s.xml">
+    <history-entry file="All_in_tests - 2018.09.30 at 10h 24m 17s.xml">
       <configuration name="All in tests" configurationId="JUnit" />
     </history-entry>
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="10" y="23" width="1260" height="684" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
@@ -356,21 +444,21 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23973727" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2358643" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3293919" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Terminal" sideWeight="0.49919224" weight="0.32876712" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.50080776" side_tool="true" weight="0.26712328" />
+      <window_info anchor="bottom" id="Messages" weight="0.32876712" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3293919" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.26712328" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3293919" />
       <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32922825" />
+      <window_info anchor="right" id="Coverage" side_tool="true" weight="0.32875606" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Palette&#9;" />
@@ -379,18 +467,40 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Designer" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.2358643" />
+      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Messages" order="1" weight="0.32876712" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50080776" side_tool="true" weight="0.26712328" />
+      <window_info anchor="bottom" id="Terminal" order="3" sideWeight="0.49919224" weight="0.32876712" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32876712" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.49919224" visible="true" weight="0.26712328" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="10" weight="0.3293919" />
+      <window_info anchor="right" id="Palette" order="0" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Theme Preview" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32875606" />
+      <window_info anchor="right" id="Maven Projects" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="523" column="32" lean-forward="true" selection-start-line="523" selection-start-column="32" selection-end-line="523" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SomePlaygrounds.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -421,30 +531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/src/KidTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Visit.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/src/VisitTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/src/DoubleSwingSiteTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -461,26 +547,6 @@
             <element signature="e#397#398#0" expanded="true" />
             <element signature="e#427#428#0" expanded="true" />
             <element signature="e#462#463#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/src/PlayGroundTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/src/PlaySiteTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -506,32 +572,119 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Kid.java">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/Map.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+        <state relative-caret-position="226">
+          <caret line="160" column="36" lean-forward="true" selection-start-line="160" selection-start-column="36" selection-end-line="162" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="1248" selection-start-line="1248" selection-end-line="1248" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/lang/Long.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="53" column="19" selection-start-line="53" selection-start-column="19" selection-end-line="53" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/src.zip!/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="306" column="12" selection-start-line="306" selection-start-column="12" selection-end-line="306" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/src/PlayGroundTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
           <folding>
-            <element signature="e#575#576#0" expanded="true" />
-            <element signature="e#603#604#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/src/KidTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="29" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/src/PlaySiteTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="245">
+          <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Visit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#720#721#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PlaySite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        <state relative-caret-position="195">
+          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
-            <element signature="e#539#540#0" expanded="true" />
             <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#620#621#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/src/VisitTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Kid.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-186">
+          <caret line="61" selection-start-line="61" selection-end-line="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Playground.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="27" column="32" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+        <state relative-caret-position="300">
+          <caret line="20" column="39" lean-forward="true" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+          <folding>
+            <element signature="e#444#445#0" expanded="true" />
+            <element signature="e#475#476#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -7,16 +7,16 @@ class VisitTest {
     @Test
     void getPlaySite_CorrectlyDeterminesVisitSite_BallPitVisitReturnsBallPit() {
         BallPitSite ballPit = new BallPitSite(1);
-        Visit visit = new Visit(ballPit);
+        Visit visit = new Visit(ballPit, Visit.Status.onsite);
         assertEquals(ballPit, visit.getPlaySite());
     }
 
     @Test
     void getVisitLength_CorrectlyDeterminesVisitLength_ReturnsLengthOfVisit()
             throws InterruptedException {
-        Kid kid = new Kid(true);
+        Kid kid = new Kid("Rasmus", 5, 10000000L, "GENERAL", true);
         BallPitSite ballPit = new BallPitSite(1);
-        kid.addSiteVisit(ballPit);
+        kid.addSiteVisit(ballPit, Visit.Status.onsite);
         Thread.sleep(1000);
         kid.exitSite();
         assert(kid.visits.get(0).getVisitLength() > 0);
@@ -24,9 +24,9 @@ class VisitTest {
 
     @Test
     void getVisitLength_DeterminesIfVisitIsStillOngoing_ReturnsNegativeOneWhenVisitIsActive() {
-        Kid kid = new Kid(true);
+        Kid kid = new Kid("Rasmus", 5, 10000000L, "GENERAL", true);
         BallPitSite ballPit = new BallPitSite(1);
-        kid.addSiteVisit(ballPit);
+        kid.addSiteVisit(ballPit, Visit.Status.onsite);
         assertEquals(-1, kid.visits.get(0).getVisitLength());
     }
 }
