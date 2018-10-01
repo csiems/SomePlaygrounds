@@ -1,6 +1,7 @@
 package components;
 
 import utils.Kid;
+import utils.Ticket;
 import utils.Visit;
 
 import java.util.*;
@@ -10,6 +11,8 @@ public abstract class PlaySite {
     protected int capacity = 0;
     protected Deque<Kid> kidsOnSite = new ArrayDeque<>();
     protected Deque<Kid> kidsOnQueue = new ArrayDeque<>();
+    protected int vipCounter = 0;
+    protected int generalCounter = 0;
     protected Map<Long, List<Kid>> historicalVisitors = new HashMap<>();
 
     public int getCapacity() {
@@ -39,13 +42,27 @@ public abstract class PlaySite {
             return -1;
         } else if (kid.acceptsQueue() && !kidsOnQueue.contains(kid)) {
             // if kid accepts queue and is not in queue already, add to queue
-            kidsOnQueue.addLast(kid);
+            if ((kid.getTicket().getType() == Ticket.Type.VIP) && vipCounter == 0 && kid.getTicket().getSkips() > 0) {
+                // VIP's get added to front of queue
+                kidsOnQueue.addFirst(kid);
+                kid.getTicket().decrementSkips();
+                vipCounter++;
+                generalCounter = 0;
+            } else {
+                // GENERAL admission gets added to back of queue
+                kidsOnQueue.addLast(kid);
+                generalCounter++;
+                if (generalCounter > 3) {
+                    vipCounter = 0;
+                }
+            }
             kid.addSiteVisit(this, Visit.Status.ONQUEUE);
         }
 
         // add this visitor to site historical record
         Long currentKey = kid.getCurrentVisit().getTimeEntered().getTime();
         if (!historicalVisitors.containsKey(currentKey)) {
+            // if new key, create new entry with new value
             List<Kid> newKidList = new ArrayList<>();
             newKidList.add(kid);
             historicalVisitors.put(currentKey, newKidList);

@@ -4,8 +4,11 @@ import java.util.Objects;
 
 public class Ticket {
 
+    private static final int VIP_SKIPS = 3;
+
     private Type type;
     private long number;
+    private int skips;
 
     public enum Type {
         GENERAL,
@@ -15,6 +18,11 @@ public class Ticket {
     public Ticket(Type type, long number) {
         this.type = type;
         this.number = number;
+        if (type.equals(Type.VIP)) {
+            skips = VIP_SKIPS;
+        } else {
+            skips = 0;
+        }
     }
 
     public Type getType() {
@@ -23,6 +31,18 @@ public class Ticket {
 
     public long getNumber() {
         return number;
+    }
+
+    public int getSkips() {
+        return skips;
+    }
+
+    public void decrementSkips() {
+        if (skips > 0) {
+            skips--;
+        } else {
+            skips = 0;
+        }
     }
 
     @Override

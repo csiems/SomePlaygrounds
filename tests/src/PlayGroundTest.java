@@ -240,38 +240,5 @@ public class PlayGroundTest {
         assertEquals(30.0, playground.getCurrentUtilizationStat());
     }
 
-    @Test
-    public void getUsageStats_ReturnsStatForSingleSite_UtilizationIsThirtyPercent() {
-        Playground playground = new Playground();
-        DoubleSwingSite swings = new DoubleSwingSite(5);
-        BallPitSite ballpit = new BallPitSite(10);
-        playground.addPlaySite(swings);
-        playground.addPlaySite(ballpit);
-        Kid kidA = new Kid("Rasmus", 5,
-                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
-        Kid kidB = new Kid("Hanna", 4,
-                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
-        Kid kidC = new Kid("Helgi", 3,
-                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
-        Kid kidD = new Kid("Kaspar", 3,
-                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
-        Kid kidE = new Kid("Artjom", 3,
-                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
-        Kid kidF = new Kid("Kirill", 3,
-                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
-        Kid kidG = new Kid("Mirtel", 3,
-                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
-        Kid kidH = new Kid("Liisa", 3,
-                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
-        swings.addKid(kidA);
-        ballpit.addKid(kidB);
-        swings.addKid(kidC);
-        ballpit.addKid(kidD);
-        swings.addKid(kidE);
-        ballpit.addKid(kidF);
-        ballpit.addKid(kidG);
-        assertEquals(30.0, playground.getCurrentUtilizationStat(swings));
-    }
-
 
 }
