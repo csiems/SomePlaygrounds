@@ -56,13 +56,14 @@ public class Playground {
         Map<Long, List<Kid>> filteredVisitors = new TreeMap<>();
 
         for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
+            if (entry.getKey() > end) {
+                return filteredVisitors;
+            }
+
             if (entry.getKey() >= start) {
                 filteredVisitors.put(entry.getKey(), entry.getValue());
             }
 
-            if (entry.getKey() > end) {
-                return filteredVisitors;
-            }
         }
         return filteredVisitors;
     }
@@ -108,8 +109,15 @@ public class Playground {
                 currentVisitors.add(kid);
             }
         }
-
         return currentVisitors;
+    }
+
+    public double getUsageStats() {
+        return getCurrentVisitors().size() * 100.00f / capacity;
+    }
+
+    public double getUsageStats(PlaySite site) {
+        return site.getUsageStats();
     }
 
 }

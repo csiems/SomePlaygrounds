@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Date;
@@ -62,10 +63,10 @@ public class PlayGroundTest {
         Playground playground = new Playground();
         DoubleSwingSite swings = new DoubleSwingSite(1);
         playground.addPlaySite(swings);
-        Kid kidA = new Kid("Rasmus", 5, 10000000L, "GENERAL", true);
-        Kid kidB = new Kid("Hanna", 4, 10000001L, "GENERAL", true);
-        Kid kidC = new Kid("Helgi", 3, 10000002L, "GENERAL", true);
-        Kid kidD = new Kid("Kaspar", 3, 10000003L, "GENERAL", true);
+        Kid kidA = new Kid("Rasmus", 5, new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidB = new Kid("Hanna", 4, new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidC = new Kid("Helgi", 3, new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidD = new Kid("Kaspar", 3, new Ticket(Ticket.Type.GENERAL, 100000000L), true);
         swings.addKid(kidA);
         swings.addKid(kidB);
         swings.addKid(kidC);
@@ -83,14 +84,22 @@ public class PlayGroundTest {
         BallPitSite ballpit = new BallPitSite(2);
         playground.addPlaySite(swings);
         playground.addPlaySite(ballpit);
-        Kid kidA = new Kid("Rasmus", 5, 10000000L, "GENERAL", true);
-        Kid kidB = new Kid("Hanna", 4, 10000001L, "GENERAL", true);
-        Kid kidC = new Kid("Helgi", 3, 10000002L, "GENERAL", true);
-        Kid kidD = new Kid("Kaspar", 3, 10000003L, "GENERAL", true);
-        Kid kidE = new Kid("Artjom", 3, 10000003L, "GENERAL", true);
-        Kid kidF = new Kid("Kirill", 3, 10000003L, "GENERAL", true);
-        Kid kidG = new Kid("Mirtel", 3, 10000003L, "GENERAL", true);
-        Kid kidH = new Kid("Liisa", 3, 10000003L, "GENERAL", true);
+        Kid kidA = new Kid("Rasmus", 5,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidB = new Kid("Hanna", 4,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidC = new Kid("Helgi", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidD = new Kid("Kaspar", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidE = new Kid("Artjom", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidF = new Kid("Kirill", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidG = new Kid("Mirtel", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidH = new Kid("Liisa", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
         swings.addKid(kidA);
         Thread.sleep(pause);
         ballpit.addKid(kidB);
@@ -123,14 +132,22 @@ public class PlayGroundTest {
         BallPitSite ballpit = new BallPitSite(2);
         playground.addPlaySite(swings);
         playground.addPlaySite(ballpit);
-        Kid kidA = new Kid("Rasmus", 5, 10000000L, "GENERAL", true);
-        Kid kidB = new Kid("Hanna", 4, 10000001L, "GENERAL", true);
-        Kid kidC = new Kid("Helgi", 3, 10000002L, "GENERAL", true);
-        Kid kidD = new Kid("Kaspar", 3, 10000003L, "GENERAL", true);
-        Kid kidE = new Kid("Artjom", 3, 10000003L, "GENERAL", true);
-        Kid kidF = new Kid("Kirill", 3, 10000003L, "GENERAL", true);
-        Kid kidG = new Kid("Mirtel", 3, 10000003L, "GENERAL", true);
-        Kid kidH = new Kid("Liisa", 3, 10000003L, "GENERAL", true);
+        Kid kidA = new Kid("Rasmus", 5,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidB = new Kid("Hanna", 4,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidC = new Kid("Helgi", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidD = new Kid("Kaspar", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidE = new Kid("Artjom", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidF = new Kid("Kirill", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidG = new Kid("Mirtel", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidH = new Kid("Liisa", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
         swings.addKid(kidA);
         ballpit.addKid(kidB);
         swings.addKid(kidC);
@@ -155,14 +172,22 @@ public class PlayGroundTest {
         BallPitSite ballpit = new BallPitSite(2);
         playground.addPlaySite(swings);
         playground.addPlaySite(ballpit);
-        Kid kidA = new Kid("Rasmus", 5, 10000000L, "GENERAL", true);
-        Kid kidB = new Kid("Hanna", 4, 10000001L, "GENERAL", true);
-        Kid kidC = new Kid("Helgi", 3, 10000002L, "GENERAL", true);
-        Kid kidD = new Kid("Kaspar", 3, 10000003L, "GENERAL", true);
-        Kid kidE = new Kid("Artjom", 3, 10000003L, "GENERAL", true);
-        Kid kidF = new Kid("Kirill", 3, 10000003L, "GENERAL", true);
-        Kid kidG = new Kid("Mirtel", 3, 10000003L, "GENERAL", true);
-        Kid kidH = new Kid("Liisa", 3, 10000003L, "GENERAL", true);
+        Kid kidA = new Kid("Rasmus", 5,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidB = new Kid("Hanna", 4,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidC = new Kid("Helgi", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidD = new Kid("Kaspar", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidE = new Kid("Artjom", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidF = new Kid("Kirill", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidG = new Kid("Mirtel", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidH = new Kid("Liisa", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
         swings.addKid(kidA);
         ballpit.addKid(kidB);
         swings.addKid(kidC);
@@ -178,4 +203,71 @@ public class PlayGroundTest {
 
         assertEquals(4, playground.getCurrentVisitors().size());
     }
+
+    @Test
+    public void getUsageStats_ReturnsStatForAllSites_UtilizationIsThirtyPercent() {
+        Playground playground = new Playground();
+        DoubleSwingSite swings = new DoubleSwingSite(5);
+        BallPitSite ballpit = new BallPitSite(10);
+        playground.addPlaySite(swings);
+        playground.addPlaySite(ballpit);
+        Kid kidA = new Kid("Rasmus", 5,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidB = new Kid("Hanna", 4,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidC = new Kid("Helgi", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidD = new Kid("Kaspar", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidE = new Kid("Artjom", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidF = new Kid("Kirill", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidG = new Kid("Mirtel", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidH = new Kid("Liisa", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        swings.addKid(kidA);
+        ballpit.addKid(kidB);
+        swings.addKid(kidC);
+        ballpit.addKid(kidD);
+        swings.addKid(kidE);
+        ballpit.addKid(kidF);
+        assertEquals(30.0, playground.getUsageStats());
+    }
+
+    @Test
+    public void getUsageStats_ReturnsStatForSingleSite_UtilizationIsThirtyPercent() {
+        Playground playground = new Playground();
+        DoubleSwingSite swings = new DoubleSwingSite(5);
+        BallPitSite ballpit = new BallPitSite(10);
+        playground.addPlaySite(swings);
+        playground.addPlaySite(ballpit);
+        Kid kidA = new Kid("Rasmus", 5,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidB = new Kid("Hanna", 4,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidC = new Kid("Helgi", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidD = new Kid("Kaspar", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidE = new Kid("Artjom", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidF = new Kid("Kirill", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidG = new Kid("Mirtel", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidH = new Kid("Liisa", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        swings.addKid(kidA);
+        ballpit.addKid(kidB);
+        swings.addKid(kidC);
+        ballpit.addKid(kidD);
+        swings.addKid(kidE);
+        ballpit.addKid(kidF);
+        ballpit.addKid(kidG);
+        assertEquals(30.0, playground.getUsageStats(swings));
+    }
+
+
 }

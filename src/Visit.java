@@ -7,8 +7,8 @@ public class Visit {
     private Date timeExited;
 
     public enum Status {
-        onsite,
-        onqueue;
+        ONSITE,
+        ONQUEUE;
     }
 
     public Visit(PlaySite site, Status status) {

@@ -32,4 +32,7 @@ public class SlideSite extends PlaySite {
     public int getSlideCount() {
         return capacity;
     }
+
+
+
 }
