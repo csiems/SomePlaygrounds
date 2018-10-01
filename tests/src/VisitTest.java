@@ -24,7 +24,7 @@ class VisitTest {
         kid.addSiteVisit(ballPit, Visit.Status.ONSITE);
         Thread.sleep(1000);
         kid.exitSite();
-        assert(kid.visits.get(0).getVisitLength() > 0);
+        assert(kid.getVisits().get(0).getVisitLength() > 0);
     }
 
     @Test
@@ -33,6 +33,6 @@ class VisitTest {
                 new Ticket(Ticket.Type.GENERAL, 100000000L), true);
         BallPitSite ballPit = new BallPitSite(1);
         kid.addSiteVisit(ballPit, Visit.Status.ONSITE);
-        assertEquals(-1, kid.visits.get(0).getVisitLength());
+        assertEquals(-1, kid.getVisits().get(0).getVisitLength());
     }
 }

@@ -22,7 +22,7 @@ class KidTest {
                 new Ticket(Ticket.Type.GENERAL, 100000000L), true);
         BallPitSite ballPit = new BallPitSite(1);
         kid.addSiteVisit(ballPit, Visit.Status.ONSITE);
-        assertEquals(1, kid.visits.size());
+        assertEquals(1, kid.getVisits().size());
     }
 
     @Test
@@ -45,7 +45,7 @@ class KidTest {
         BallPitSite ballPit = new BallPitSite(1);
         kid.addSiteVisit(ballPit, Visit.Status.ONSITE);
         kid.exitSite();
-        assertNotNull(kid.visits.get(0).getTimeExited());
+        assertNotNull(kid.getVisits().get(0).getTimeExited());
     }
 
     @Test

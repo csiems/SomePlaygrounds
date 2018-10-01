@@ -108,12 +108,16 @@ public class Playground {
         return currentVisitors;
     }
 
-    public double getUsageStats() {
-        return getCurrentVisitors().size() * 100.00f / capacity;
+    /**
+     * Calculates the current utilization percentage of a playground.
+     * @return A double representing the percentage utilized
+     */
+    public double getCurrentUtilizationStat() {
+        return getCurrentVisitors().size() * 100.0 / capacity;
     }
 
-    public double getUsageStats(PlaySite site) {
-        return site.getUsageStats();
+    public double getUtilizationSnapShot(long start, long end) {
+        return getVisitorsAsList(start, end).size() * 100.0 / capacity;
     }
 
 }

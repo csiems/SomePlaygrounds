@@ -237,7 +237,7 @@ public class PlayGroundTest {
         ballpit.addKid(kidD);
         swings.addKid(kidE);
         ballpit.addKid(kidF);
-        assertEquals(30.0, playground.getUsageStats());
+        assertEquals(30.0, playground.getCurrentUtilizationStat());
     }
 
     @Test
@@ -270,7 +270,7 @@ public class PlayGroundTest {
         swings.addKid(kidE);
         ballpit.addKid(kidF);
         ballpit.addKid(kidG);
-        assertEquals(30.0, playground.getUsageStats(swings));
+        assertEquals(30.0, playground.getCurrentUtilizationStat(swings));
     }
 
 

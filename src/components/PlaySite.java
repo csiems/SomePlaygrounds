@@ -88,8 +88,16 @@ public abstract class PlaySite {
         return filteredVisitors;
     }
 
-    public double getUsageStats() {
-        return kidsOnSite.size() * 100.00f / capacity;
+    public double getCurrentUtilizationStat() {
+        return kidsOnSite.size() * 100.0 / capacity;
+    }
+
+    public double getUtilizationSnapShot(long start, long end) {
+        List<Kid> tempList = new ArrayList<>();
+        for (Map.Entry<Long, List<Kid>> entry : getVisitors(start, end).entrySet()) {
+            tempList.addAll(entry.getValue());
+        }
+        return tempList.size() * 100.0 / capacity;
     }
 
 }
