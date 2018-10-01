@@ -1,3 +1,8 @@
+package components;
+
+import utils.Kid;
+import utils.Visit;
+
 import java.util.*;
 
 public abstract class PlaySite {
@@ -74,11 +79,6 @@ public abstract class PlaySite {
 
         Map<Long, List<Kid>> filteredVisitors = new TreeMap<>();
         Map<Long, List<Kid>> visitors = getHistoricalVisitors();
-
-        if (start == end) {
-            filteredVisitors.put(start, visitors.get(start));
-            return filteredVisitors;
-        }
 
         for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
             if (entry.getKey() >= start && entry.getKey() <= end) {

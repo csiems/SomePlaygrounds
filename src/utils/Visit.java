@@ -1,3 +1,7 @@
+package utils;
+
+import components.PlaySite;
+
 import java.util.Date;
 
 public class Visit {
@@ -56,7 +60,7 @@ public class Visit {
 
     @Override
     public String toString() {
-        return "Visit{" +
+        return "utils.Visit{" +
                 "site=" + site +
                 ", status='" + status + '\'' +
                 ", timeEntered=" + timeEntered +

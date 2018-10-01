@@ -1,3 +1,7 @@
+package utils;
+
+import components.PlaySite;
+
 import java.util.ArrayList;
 import java.util.Objects;
 
@@ -6,7 +10,7 @@ public class Kid {
     private int age;
     private Ticket ticket;
     private boolean acceptsQueue;
-    ArrayList<Visit> visits;
+    private ArrayList<Visit> visits;
     private Visit currentVisit = null;
 
     public Kid(String name, int age, Ticket ticket, boolean acceptsQueue) {
@@ -90,7 +94,7 @@ public class Kid {
 
     @Override
     public String toString() {
-        return "Kid{" +
+        return "utils.Kid{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", ticket=" + ticket +

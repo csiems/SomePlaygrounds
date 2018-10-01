@@ -1,3 +1,5 @@
+package components;
+
 public class BallPitSite extends PlaySite {
 
     public BallPitSite(int capacity) {

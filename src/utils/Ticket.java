@@ -1,3 +1,5 @@
+package utils;
+
 import java.util.Objects;
 
 public class Ticket {
@@ -39,7 +41,7 @@ public class Ticket {
 
     @Override
     public String toString() {
-        return "Ticket{" +
+        return "utils.Ticket{" +
                 "type=" + type +
                 ", number=" + number +
                 '}';

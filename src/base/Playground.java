@@ -1,3 +1,8 @@
+package base;
+
+import components.PlaySite;
+import utils.Kid;
+
 import java.util.*;
 
 public class Playground {
@@ -29,7 +34,7 @@ public class Playground {
 
     /**
      * Iterates through the historical visitor list of every site in
-     * a playground and adds Kid to a map sorted by time of entry.
+     * a playground and adds utils.Kid to a map sorted by time of entry.
      * @return Map of visitors sorted by time of entry
      */
     public Map<Long, List<Kid>> getVisitors() {

@@ -1,3 +1,5 @@
+package components;
+
 public class SlideSite extends PlaySite {
 
     public SlideSite(int slides) {

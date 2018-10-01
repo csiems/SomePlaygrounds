@@ -1,3 +1,5 @@
+package components;
+
 public class CarouselSite extends PlaySite {
 
     public CarouselSite(int numberOfAnimals) {
