@@ -43,16 +43,16 @@ public abstract class PlaySite {
         } else if (kid.acceptsQueue() && !kidsOnQueue.contains(kid)) {
             // if kid accepts queue and is not in queue already, add to queue
             if ((kid.getTicket().getType() == Ticket.Type.VIP) && vipCounter == 0 && kid.getTicket().getSkips() > 0) {
-                // VIP's get added to front of queue
+                // VIP's get added to front of queue (only decrement skip if someone is skipped)
+                if (kidsOnQueue.size() > 0) { kid.getTicket().decrementSkips(); }
                 kidsOnQueue.addFirst(kid);
-                kid.getTicket().decrementSkips();
                 vipCounter++;
                 generalCounter = 0;
             } else {
                 // GENERAL admission gets added to back of queue
                 kidsOnQueue.addLast(kid);
                 generalCounter++;
-                if (generalCounter > 3) {
+                if (generalCounter > 2) {
                     vipCounter = 0;
                 }
             }

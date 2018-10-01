@@ -56,6 +56,74 @@ class PlaySiteTest {
     }
 
     @Test
+    void addKid_FirstVIPAddedToFrontOfQueue_VIPIsFirstInQueue() {
+        BallPitSite ballpit = new BallPitSite(1);
+        Kid kidA = new Kid("Rasmus", 5,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidB = new Kid("Hanna", 4,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidC = new Kid("Helgi", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidD = new Kid("Kaspar", 3,
+                new Ticket(Ticket.Type.VIP, 100000000L), true);
+        ballpit.addKid(kidA);
+        ballpit.addKid(kidB);
+        ballpit.addKid(kidC);
+        ballpit.addKid(kidD);
+        assertEquals(kidD, ballpit.getKidsOnQueue().getFirst());
+    }
+
+    @Test
+    void addKid_SecondVIPAddedToFrontOfQueue_VIPIsLastInQueue() {
+        BallPitSite ballpit = new BallPitSite(1);
+        Kid kidA = new Kid("Rasmus", 5,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidB = new Kid("Hanna", 4,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidC = new Kid("Helgi", 3,
+                new Ticket(Ticket.Type.VIP, 100000000L), true);
+        Kid kidD = new Kid("Kaspar", 3,
+                new Ticket(Ticket.Type.VIP, 100000000L), true);
+        ballpit.addKid(kidA);
+        ballpit.addKid(kidB);
+        ballpit.addKid(kidC);
+        ballpit.addKid(kidD);
+        assertEquals(kidD, ballpit.getKidsOnQueue().getLast());
+    }
+
+    @Test
+    void addKid_VIPCounterProperlyResets_SecondVIPIsFirstInQueue() {
+        BallPitSite ballpit = new BallPitSite(1);
+        Kid kidA = new Kid("Rasmus", 5,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidB = new Kid("Hanna", 4,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidC = new Kid("Helgi", 3,
+                new Ticket(Ticket.Type.VIP, 100000000L), true);
+        Kid kidD = new Kid("Kaspar", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidE = new Kid("Artjom", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidF = new Kid("Kirill", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidG = new Kid("Mirtel", 3,
+                new Ticket(Ticket.Type.VIP, 100000000L), true);
+        Kid kidH = new Kid("Liisa", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        ballpit.addKid(kidA);
+        ballpit.addKid(kidB);
+        ballpit.addKid(kidC);
+        ballpit.addKid(kidD);
+        ballpit.addKid(kidE);
+        ballpit.addKid(kidF);
+        ballpit.addKid(kidG);
+        ballpit.addKid(kidH);
+
+        System.out.println(ballpit.getKidsOnQueue());
+        assertEquals(kidG, ballpit.getKidsOnQueue().getFirst());
+    }
+
+    @Test
     void removeKid_RemovesKidFromSiteIfPresent_SiteSizeIsZero() {
         BallPitSite ballpit = new BallPitSite(1);
         Kid kidOnSite = new Kid("Rasmus", 5, new Ticket(Ticket.Type.GENERAL, 100000000L), false);
