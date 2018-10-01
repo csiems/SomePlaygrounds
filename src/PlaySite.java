@@ -53,7 +53,7 @@ public abstract class PlaySite {
         return kidsOnQueue.size();
     }
 
-    public synchronized int removeKid(Kid kid) {
+    public int removeKid(Kid kid) {
         if (kidsOnSite.contains(kid)) {
             kidsOnSite.remove(kid);
             kid.exitSite();
@@ -80,12 +80,8 @@ public abstract class PlaySite {
             return filteredVisitors;
         }
 
-
         for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
-            if (entry.getKey() > end) {
-                return filteredVisitors;
-            }
-            if (entry.getKey() >= start) {
+            if (entry.getKey() >= start && entry.getKey() <= end) {
                 filteredVisitors.put(entry.getKey(), entry.getValue());
             }
         }

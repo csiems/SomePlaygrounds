@@ -131,21 +131,10 @@ class PlaySiteTest {
         Thread.sleep(100);
         ballpit.addKid(kidH);
 
-//        System.out.println("KidA=" + kidA.getCurrentVisit().getTimeEntered().getTime());
-//        System.out.println("KidB=" + kidB.getCurrentVisit().getTimeEntered().getTime());
-//        System.out.println("KidC=" + kidC.getCurrentVisit().getTimeEntered().getTime());
-//        System.out.println("KidD=" + kidD.getCurrentVisit().getTimeEntered().getTime());
-//        System.out.println("KidE=" + kidE.getCurrentVisit().getTimeEntered().getTime());
-//        System.out.println("KidF=" + kidF.getCurrentVisit().getTimeEntered().getTime());
-//        System.out.println("KidG=" + kidG.getCurrentVisit().getTimeEntered().getTime());
-//        System.out.println("KidH=" + kidH.getCurrentVisit().getTimeEntered().getTime());
-
-
         Long start = kidA.getCurrentVisit().getTimeEntered().getTime();
         Long end = kidF.getCurrentVisit().getTimeEntered().getTime();
 
         int result = 0;
-        System.out.println(ballpit.getVisitors(start, end).size());
         for (Map.Entry<Long, List<Kid>> entry : ballpit.getVisitors(start, end).entrySet()) {
             result += entry.getValue().size();
         }

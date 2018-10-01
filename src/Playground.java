@@ -56,14 +56,9 @@ public class Playground {
         Map<Long, List<Kid>> filteredVisitors = new TreeMap<>();
 
         for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
-            if (entry.getKey() > end) {
-                return filteredVisitors;
-            }
-
-            if (entry.getKey() >= start) {
+            if (entry.getKey() >= start && entry.getKey() <= end) {
                 filteredVisitors.put(entry.getKey(), entry.getValue());
             }
-
         }
         return filteredVisitors;
     }
@@ -78,16 +73,12 @@ public class Playground {
         return listedKids;
     }
 
-    public List<Kid> getVisitorsAsList(long entryStart, long entryEnd) {
+    public List<Kid> getVisitorsAsList(long start, long end) {
         Map<Long, List<Kid>> visitors = getVisitors();
         List<Kid> filteredVisitorsList = new ArrayList<>();
 
         for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
-            if (entry.getKey() > entryEnd) {
-                return filteredVisitorsList;
-            }
-
-            if (entry.getKey() >= entryStart) {
+            if (entry.getKey() >= start && entry.getKey() <= end) {
                 filteredVisitorsList.addAll(entry.getValue());
             }
         }
