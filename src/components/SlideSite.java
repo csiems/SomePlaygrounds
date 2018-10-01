@@ -1,5 +1,11 @@
 package components;
 
+import utils.Kid;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
 public class SlideSite extends PlaySite {
 
     public SlideSite(int slides) {
@@ -20,7 +26,6 @@ public class SlideSite extends PlaySite {
         } else {
             capacity = 0;
         }
-
     }
 
     public void removeSlides(int slide) {
@@ -35,6 +40,17 @@ public class SlideSite extends PlaySite {
         return capacity;
     }
 
+    @Override
+    public double getCurrentUtilizationStat() {
+        return kidsOnSite.size() * 100.0 / capacity;
+    }
 
-
+    @Override
+    public double getUtilizationSnapShot(long start, long end) {
+        List<Kid> tempList = new ArrayList<>();
+        for (Map.Entry<Long, List<Kid>> entry : getVisitors(start, end).entrySet()) {
+            tempList.addAll(entry.getValue());
+        }
+        return tempList.size() * 100.0 / capacity;
+    }
 }
