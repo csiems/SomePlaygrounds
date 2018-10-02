@@ -1,5 +1,9 @@
 package base;
 
+import com.google.common.base.Supplier;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Multimap;
+import com.google.common.collect.Multimaps;
 import components.PlaySite;
 import utils.Kid;
 
@@ -37,57 +41,48 @@ public class Playground {
      * a playground and adds utils.Kid to a map sorted by time of entry.
      * @return Map of visitors sorted by time of entry
      */
-    public Map<Long, List<Kid>> getVisitors() {
-        Map<Long, List<Kid>> sortedMap = new TreeMap<>();
+    public Multimap<Long, Kid> getVisitors() {
+        Multimap<Long, Kid> combinedMap = Multimaps.newMultimap(
+                new TreeMap<Long, Collection<Kid>>(),
+                (Supplier<List<Kid>>) Lists::newArrayList
+        );
 
         for (PlaySite site : playSites) {
-            Map<Long, List<Kid>> visitors = site.getHistoricalVisitors();
-            for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
-                Long currentKey = entry.getKey();
-                if(!sortedMap.containsKey(currentKey)) {
-                    sortedMap.put(currentKey, entry.getValue());
-                } else {
-                    List<Kid> existingValue = sortedMap.get(currentKey);
-                    existingValue.addAll(entry.getValue());
-                    sortedMap.put(currentKey, existingValue);
-                }
-            }
+            Multimap<Long, Kid> siteMap = site.getVisitors();
+            combinedMap.putAll(siteMap);
         }
-        return sortedMap;
+
+        return combinedMap;
     }
 
-    public Map<Long, List<Kid>> getVisitors(long start, long end) {
-        Map<Long, List<Kid>> visitors = getVisitors();
-        Map<Long, List<Kid>> filteredVisitors = new TreeMap<>();
+    public Multimap<Long, Kid> getVisitors(long start, long end) {
+        Multimap<Long, Kid> combinedMap = Multimaps.newMultimap(
+                new TreeMap<Long, Collection<Kid>>(),
+                (Supplier<List<Kid>>) Lists::newArrayList
+        );
 
-        for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
-            if (entry.getKey() >= start && entry.getKey() <= end) {
-                filteredVisitors.put(entry.getKey(), entry.getValue());
-            }
+        for (PlaySite site : playSites) {
+            Multimap<Long, Kid> siteMap = site.getVisitors(start, end);
+            combinedMap.putAll(siteMap);
         }
-        return filteredVisitors;
+
+        return combinedMap;
     }
 
     public List<Kid> getVisitorsAsList() {
-        List<Kid> listedKids = new ArrayList<>();
-        Map<Long, List<Kid>> visitors = getVisitors();
-
-        for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
-            listedKids.addAll(entry.getValue());
+        List<Kid> visitorsList = new ArrayList<>();
+        for (Map.Entry<Long, Kid> entry : getVisitors().entries()) {
+            visitorsList.add(entry.getValue());
         }
-        return listedKids;
+        return visitorsList;
     }
 
     public List<Kid> getVisitorsAsList(long start, long end) {
-        Map<Long, List<Kid>> visitors = getVisitors();
-        List<Kid> filteredVisitorsList = new ArrayList<>();
-
-        for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
-            if (entry.getKey() >= start && entry.getKey() <= end) {
-                filteredVisitorsList.addAll(entry.getValue());
-            }
+        List<Kid> visitorsList = new ArrayList<>();
+        for (Map.Entry<Long, Kid> entry : getVisitors(start, end).entries()) {
+            visitorsList.add(entry.getValue());
         }
-        return filteredVisitorsList;
+        return visitorsList;
     }
 
     /**

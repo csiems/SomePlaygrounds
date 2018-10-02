@@ -5,8 +5,6 @@ import utils.Kid;
 import utils.Ticket;
 
 import java.time.ZoneId;
-import java.util.List;
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -208,10 +206,7 @@ class PlaySiteTest {
         Long end = kidF.getCurrentVisit().getTimeEntered()
                 .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
 
-        int result = 0;
-        for (Map.Entry<Long, List<Kid>> entry : ballpit.getVisitors(start, end).entrySet()) {
-            result += entry.getValue().size();
-        }
+        int result = ballpit.getVisitors(start, end).entries().size();
 
         assertEquals(6, result);
 

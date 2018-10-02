@@ -20,5 +20,6 @@
       </library>
     </orderEntry>
     <orderEntry type="module" module-name="SomePlaygrounds" />
+    <orderEntry type="library" name="guava-26.0-jre" level="project" />
   </component>
 </module>

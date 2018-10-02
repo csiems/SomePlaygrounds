@@ -1,12 +1,16 @@
 package components;
 
+import com.google.common.base.Supplier;
+import com.google.common.collect.Lists;
+import com.google.common.collect.Multimaps;
+import com.google.common.collect.Range;
 import utils.Kid;
 import utils.Ticket;
 import utils.Visit;
 
 import java.time.ZoneId;
-import java.time.temporal.ChronoUnit;
 import java.util.*;
+import com.google.common.collect.Multimap;
 
 public abstract class PlaySite {
 
@@ -15,7 +19,10 @@ public abstract class PlaySite {
     protected Deque<Kid> kidsOnQueue = new ArrayDeque<>();
     protected int vipCounter = 0;
     protected int generalCounter = 0;
-    protected Map<Long, List<Kid>> historicalVisitors = new HashMap<>();
+    protected Multimap<Long, Kid> allVisitors = Multimaps.newMultimap(
+            new TreeMap<Long, Collection<Kid>>(),
+            (Supplier<List<Kid>>) Lists::newArrayList
+    );
 
     public int getCapacity() {
         return capacity;
@@ -29,8 +36,8 @@ public abstract class PlaySite {
         return kidsOnQueue;
     }
 
-    public Map<Long, List<Kid>> getHistoricalVisitors() {
-        return historicalVisitors;
+    public Multimap<Long, Kid> getVisitors() {
+        return allVisitors;
     }
 
     public synchronized int addKid(Kid kid) {
@@ -61,21 +68,13 @@ public abstract class PlaySite {
             kid.addSiteVisit(this, Visit.Status.ONQUEUE);
         }
 
-        // add this visitor to site historical record
-        Long currentKey = kid.getCurrentVisit().getTimeEntered()
+        // add this visitor to site historical record. Visitor Multimap will store
+        // duplicate keys as an ArrayList value. Since this one is backed by a
+        // TreeMap it will naturally sort by key.
+        Long timeEnteredAsKey = kid.getCurrentVisit().getTimeEntered()
                 .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
-        if (!historicalVisitors.containsKey(currentKey)) {
-            // if new key, create new entry with new value
-            List<Kid> newKidList = new ArrayList<>();
-            newKidList.add(kid);
-            historicalVisitors.put(currentKey, newKidList);
-        } else {
-            // if key already exists, get existing value and add new kid to end of it
-            List<Kid> existingKidList = historicalVisitors.get(kid.getCurrentVisit().getTimeEntered()
-                                .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
-            existingKidList.add(kid);
-            historicalVisitors.put(currentKey, existingKidList);
-        }
+        allVisitors.put(timeEnteredAsKey, kid);
+
         return kidsOnQueue.size();
     }
 
@@ -96,17 +95,12 @@ public abstract class PlaySite {
         return kidsOnQueue.size();
     }
 
-    public Map<Long, List<Kid>> getVisitors(long start, long end) {
+    public Multimap<Long, Kid> getVisitors(long start, long end) {
 
-        Map<Long, List<Kid>> filteredVisitors = new TreeMap<>();
-        Map<Long, List<Kid>> visitors = getHistoricalVisitors();
+        Multimap<Long, Kid> visitors = getVisitors();
+        Range<Long> filter = Range.closed(start, end);
+        return Multimaps.filterKeys(visitors, filter);
 
-        for (Map.Entry<Long, List<Kid>> entry : visitors.entrySet()) {
-            if (entry.getKey() >= start && entry.getKey() <= end) {
-                filteredVisitors.put(entry.getKey(), entry.getValue());
-            }
-        }
-        return filteredVisitors;
     }
 
     public abstract double getCurrentUtilizationStat();

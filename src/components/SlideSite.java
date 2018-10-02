@@ -47,10 +47,6 @@ public class SlideSite extends PlaySite {
 
     @Override
     public double getUtilizationSnapShot(long start, long end) {
-        List<Kid> tempList = new ArrayList<>();
-        for (Map.Entry<Long, List<Kid>> entry : getVisitors(start, end).entrySet()) {
-            tempList.addAll(entry.getValue());
-        }
-        return tempList.size() * 100.0 / capacity;
+        return getVisitors(start, end).entries().size() * 100.0 / capacity;
     }
 }
