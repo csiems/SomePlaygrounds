@@ -65,9 +65,9 @@ public class PlayGroundTest {
     }
 
     @Test
-    void getVisitorsAsList_ReturnsCompleteList_HistoricalVisitorsListSizeIsFour() {
+    void getVisitorsAsList_ReturnsCompleteList_HistoricalVisitorsListSizeIsFive() {
         Playground playground = new Playground();
-        DoubleSwingSite swings = new DoubleSwingSite(1);
+        DoubleSwingSite swings = new DoubleSwingSite(5);
         playground.addPlaySite(swings);
         Kid kidA = new Kid("Rasmus", 5, new Ticket(Ticket.Type.GENERAL, 100000000L), true);
         Kid kidB = new Kid("Hanna", 4, new Ticket(Ticket.Type.GENERAL, 100000000L), true);
@@ -86,8 +86,8 @@ public class PlayGroundTest {
     void getVisitorsAsList_ReturnsFilteredList_FilteredVisitorsListSizeIsFour() throws InterruptedException{
         int pause = 50;
         Playground playground = new Playground();
-        DoubleSwingSite swings = new DoubleSwingSite(1);
-        BallPitSite ballpit = new BallPitSite(2);
+        DoubleSwingSite swings = new DoubleSwingSite(20);
+        BallPitSite ballpit = new BallPitSite(20);
         playground.addPlaySite(swings);
         playground.addPlaySite(ballpit);
         Kid kidA = new Kid("Rasmus", 5,
@@ -128,7 +128,7 @@ public class PlayGroundTest {
 
         Long start = kidD.getCurrentVisit().getTimeEntered()
                 .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
-        Long end = kidG.getCurrentVisit().getTimeEntered()
+        Long end = kidG.getVisits().get(kidG.getVisits().size() - 1).getTimeEntered()
                 .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
         List<Kid> result = playground.getVisitorsAsList(start, end);
 
@@ -136,11 +136,11 @@ public class PlayGroundTest {
     }
 
     @Test
-    void getVisitorsAsList_ReturnsAllKidsIfStartAndEndExceedVisitorValues_HistoricalVisitorsListSizeIsSeven()
+    void getVisitorsAsList_ReturnsAllKidsIfStartAndEndExceedVisitorValues_HistoricalVisitorsListSizeIsEight()
             throws InterruptedException {
         Playground playground = new Playground();
-        DoubleSwingSite swings = new DoubleSwingSite(1);
-        BallPitSite ballpit = new BallPitSite(2);
+        DoubleSwingSite swings = new DoubleSwingSite(5);
+        BallPitSite ballpit = new BallPitSite(6);
         playground.addPlaySite(swings);
         playground.addPlaySite(ballpit);
         Kid kidA = new Kid("Rasmus", 5,

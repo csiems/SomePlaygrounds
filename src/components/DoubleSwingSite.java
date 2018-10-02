@@ -59,16 +59,6 @@ public class DoubleSwingSite extends PlaySite {
 
     @Override
     public double getUtilizationSnapShot(long start, long end) {
-        Multimap<Long, Kid> historicalVisitors = getVisitors(start, end);
-        List<Kid> visitorsOnsite = new ArrayList<>();
-
-        for (Map.Entry<Long, Kid> entry : historicalVisitors.entries()) {
-            if (entry.getValue().getCurrentVisit() != null
-                    && entry.getValue().getCurrentVisit().getStatus() == Visit.Status.ONSITE) {
-                visitorsOnsite.add(entry.getValue());
-            }
-        }
-
-        return visitorsOnsite.size() * 100.0 / getCapacity();
+        return getVisitors(start, end).size() * 100.0 / getCapacity();
     }
 }

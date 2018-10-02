@@ -19,7 +19,9 @@ public class Visit {
     public Visit(PlaySite site, Status status) {
         this.site = site;
         this.status = status;
-        this.timeEntered = LocalDateTime.now();
+        if (status.equals(Status.ONSITE)) {
+            this.timeEntered = LocalDateTime.now();
+        }
     }
 
     public PlaySite getPlaySite() {
@@ -38,12 +40,21 @@ public class Visit {
         return timeEntered;
     }
 
+
     public LocalDateTime getTimeExited() {
         return timeExited;
     }
 
+    public void isEntered()  {
+        if (timeEntered == null) {
+            timeEntered = LocalDateTime.now();
+        }
+    }
+
     public void isExited() {
-        timeExited = LocalDateTime.now();
+        if (timeExited == null) {
+            timeExited = LocalDateTime.now();
+        }
     }
 
     /**
@@ -52,7 +63,7 @@ public class Visit {
      *         -1 if the visit has not ended.
      */
     public long getVisitLength() {
-        if (timeExited != null) {
+        if (timeEntered != null && timeExited != null) {
             return ChronoUnit.MILLIS.between(timeEntered, timeExited);
         } else {
             return -1;

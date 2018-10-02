@@ -173,7 +173,7 @@ class PlaySiteTest {
 
     @Test
     void getVisitors_ProperlyFiltersList_ListSizeIsSix() throws InterruptedException {
-        BallPitSite ballpit = new BallPitSite(1);
+        BallPitSite ballpit = new BallPitSite(10);
         Kid kidA = new Kid("Rasmus", 5,
                 new Ticket(Ticket.Type.GENERAL, 100000000L), true);
         Kid kidB = new Kid("Hanna", 4,
@@ -219,8 +219,8 @@ class PlaySiteTest {
             throws InterruptedException{
         int pause = 50;
         Playground playground = new Playground();
-        DoubleSwingSite swings = new DoubleSwingSite(1);
-        BallPitSite ballpit = new BallPitSite(2);
+        DoubleSwingSite swings = new DoubleSwingSite(5);
+        BallPitSite ballpit = new BallPitSite(20);
         playground.addPlaySite(swings);
         playground.addPlaySite(ballpit);
         Kid kidA = new Kid("Rasmus", 5,

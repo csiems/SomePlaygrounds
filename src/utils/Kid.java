@@ -46,7 +46,7 @@ public class Kid {
     }
 
     /**
-     * Creates a visit entry for a
+     * Creates a visit entry for a kid.
      * @param site The site to which the kid should be added
      * @param status Status of kid (either ONSITE or ONQUEUE)
      * @throws UnsupportedOperationException If kid already has an active site visit
@@ -67,7 +67,8 @@ public class Kid {
      */
     public void exitSite() throws UnsupportedOperationException {
         if (currentVisit != null) {
-            visits.get(visits.lastIndexOf(currentVisit)).isExited();
+            currentVisit.isExited();
+            visits.set(visits.lastIndexOf(currentVisit), currentVisit);
             currentVisit = null;
         } else {
             throw new UnsupportedOperationException("This child is not currently visiting a site");

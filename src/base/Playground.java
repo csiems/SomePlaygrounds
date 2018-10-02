@@ -103,8 +103,8 @@ public class Playground {
     }
 
     /**
-     * Calculates the utilization rate of current onsite and
-     * onqueue users as a percentage of playground capacity).
+     * Calculates the utilization rate of current onsite
+     * users as a percentage of playground capacity.
      * @return A double representing the percentage utilized
      */
     public double getCurrentUtilizationStat() {
@@ -120,8 +120,10 @@ public class Playground {
     }
 
     /**
-     * Calculates the utilization rate of onsite and onqueue users as a
+     * Calculates the utilization rate of onsite users as a
      * percentage of playground capacity within a given range.
+     * @param start Start time in milliseconds
+     * @param end End time in milliseconds
      * @return A double representing the percentage utilized
      */
     public double getUtilizationSnapShot(long start, long end) {

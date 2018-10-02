@@ -37,6 +37,9 @@ public class Ticket {
         return skips;
     }
 
+    /**
+     * Decreases the number of skips left on a ticket
+     */
     public void decrementSkips() {
         if (skips > 0) {
             skips--;

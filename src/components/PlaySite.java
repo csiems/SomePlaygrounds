@@ -39,16 +39,20 @@ public abstract class PlaySite {
         return kidsOnQueue;
     }
 
-    public Multimap<Long, Kid> getVisitors() {
-        return allVisitors;
-    }
-
     public synchronized int addKid(Kid kid) {
         if (kidsOnSite.size() < capacity && !kidsOnSite.contains(kid) && !kidsOnQueue.contains(kid)) {
             // if space is available add kid to site if kid not already there
             kidsOnSite.addLast(kid);
             // update site visit for kid as well
             kid.addSiteVisit(this, Visit.Status.ONSITE);
+
+            // add this visitor to site historical record. Visitor Multimap will store
+            // duplicate keys as an ArrayList value. Since this one is backed by a
+            // TreeMap it will naturally sort by key.
+            Long timeEnteredAsKey = kid.getCurrentVisit().getTimeEntered()
+                    .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+            allVisitors.put(timeEnteredAsKey, kid);
+
         } else if (!kid.acceptsQueue()) {
             // if no space and kid rejects queue return -1
             return -1;
@@ -70,14 +74,6 @@ public abstract class PlaySite {
             }
             kid.addSiteVisit(this, Visit.Status.ONQUEUE);
         }
-
-        // add this visitor to site historical record. Visitor Multimap will store
-        // duplicate keys as an ArrayList value. Since this one is backed by a
-        // TreeMap it will naturally sort by key.
-        Long timeEnteredAsKey = kid.getCurrentVisit().getTimeEntered()
-                .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
-        allVisitors.put(timeEnteredAsKey, kid);
-
         return kidsOnQueue.size();
     }
 
@@ -95,6 +91,7 @@ public abstract class PlaySite {
                 // lead child in queue gets promoted to site if a kid leaves
                 Kid firstInQueue = kidsOnQueue.removeFirst();
                 kidsOnSite.addLast(firstInQueue);
+                firstInQueue.getCurrentVisit().isEntered();
             }
         } else if (kidsOnQueue.contains(kid)) {
             kidsOnQueue.remove(kid);
@@ -105,7 +102,15 @@ public abstract class PlaySite {
     }
 
     /**
-     * Finds all kids (onsite and onqueue) whose visit overlaps a given range.
+     * Returns all visitors to site.
+     * @return Map of kids who have visited site
+     */
+    public Multimap<Long, Kid> getVisitors() {
+        return allVisitors;
+    }
+
+    /**
+     * Finds all onsite visitors whose visit overlaps a given range.
      * <b>Warning: If the same kid uses a site multiple times in
      * within the given range they will be counted more than once.</b>
      * @param start The start of the range
