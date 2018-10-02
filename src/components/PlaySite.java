@@ -4,6 +4,8 @@ import utils.Kid;
 import utils.Ticket;
 import utils.Visit;
 
+import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 import java.util.*;
 
 public abstract class PlaySite {
@@ -60,7 +62,8 @@ public abstract class PlaySite {
         }
 
         // add this visitor to site historical record
-        Long currentKey = kid.getCurrentVisit().getTimeEntered().getTime();
+        Long currentKey = kid.getCurrentVisit().getTimeEntered()
+                .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
         if (!historicalVisitors.containsKey(currentKey)) {
             // if new key, create new entry with new value
             List<Kid> newKidList = new ArrayList<>();
@@ -68,7 +71,8 @@ public abstract class PlaySite {
             historicalVisitors.put(currentKey, newKidList);
         } else {
             // if key already exists, get existing value and add new kid to end of it
-            List<Kid> existingKidList = historicalVisitors.get(kid.getCurrentVisit().getTimeEntered().getTime());
+            List<Kid> existingKidList = historicalVisitors.get(kid.getCurrentVisit().getTimeEntered()
+                                .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli());
             existingKidList.add(kid);
             historicalVisitors.put(currentKey, existingKidList);
         }

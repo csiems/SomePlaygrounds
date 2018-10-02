@@ -2,13 +2,16 @@ package utils;
 
 import components.PlaySite;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 public class Visit {
     private PlaySite site;
     private Status status;
-    private Date timeEntered;
-    private Date timeExited;
+    private LocalDateTime timeEntered;
+    private LocalDateTime timeExited;
 
     public enum Status {
         ONSITE,
@@ -18,7 +21,7 @@ public class Visit {
     public Visit(PlaySite site, Status status) {
         this.site = site;
         this.status = status;
-        this.timeEntered = new Date();
+        this.timeEntered = LocalDateTime.now();
     }
 
     public PlaySite getPlaySite() {
@@ -33,16 +36,16 @@ public class Visit {
         this.status = status;
     }
 
-    public Date getTimeEntered() {
+    public LocalDateTime getTimeEntered() {
         return timeEntered;
     }
 
-    public Date getTimeExited() {
+    public LocalDateTime getTimeExited() {
         return timeExited;
     }
 
     public void isExited() {
-        timeExited = new Date();
+        timeExited = LocalDateTime.now();
     }
 
     /**
@@ -52,7 +55,7 @@ public class Visit {
      */
     public long getVisitLength() {
         if (timeExited != null) {
-            return timeExited.getTime() - timeEntered.getTime();
+            return ChronoUnit.MILLIS.between(timeEntered, timeExited);
         } else {
             return -1;
         }

@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import utils.Kid;
 import utils.Ticket;
 
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
 
@@ -120,8 +121,10 @@ public class PlayGroundTest {
         Thread.sleep(pause);
         swings.addKid(kidH);
 
-        Long start = kidB.getCurrentVisit().getTimeEntered().getTime();
-        Long end = kidG.getCurrentVisit().getTimeEntered().getTime();
+        Long start = kidB.getCurrentVisit().getTimeEntered()
+                .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+        Long end = kidG.getCurrentVisit().getTimeEntered()
+                .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
 
         List<Kid> result = playground.getVisitorsAsList(start, end);
 
@@ -161,7 +164,8 @@ public class PlayGroundTest {
         swings.addKid(kidG);
         swings.addKid(kidH);
 
-        Long start = kidA.getCurrentVisit().getTimeEntered().getTime() - 10;
+        Long start = kidA.getCurrentVisit().getTimeEntered()
+                .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli() - 10;
         Long end = new Date().getTime();
 
         List<Kid> result = playground.getVisitorsAsList(start, end);

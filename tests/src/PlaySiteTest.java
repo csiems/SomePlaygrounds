@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import utils.Kid;
 import utils.Ticket;
 
+import java.time.ZoneId;
 import java.util.List;
 import java.util.Map;
 
@@ -119,7 +120,6 @@ class PlaySiteTest {
         ballpit.addKid(kidG);
         ballpit.addKid(kidH);
 
-        System.out.println(ballpit.getKidsOnQueue());
         assertEquals(kidG, ballpit.getKidsOnQueue().getFirst());
     }
 
@@ -203,8 +203,10 @@ class PlaySiteTest {
         Thread.sleep(100);
         ballpit.addKid(kidH);
 
-        Long start = kidA.getCurrentVisit().getTimeEntered().getTime();
-        Long end = kidF.getCurrentVisit().getTimeEntered().getTime();
+        Long start = kidA.getCurrentVisit().getTimeEntered()
+                .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+        Long end = kidF.getCurrentVisit().getTimeEntered()
+                .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
 
         int result = 0;
         for (Map.Entry<Long, List<Kid>> entry : ballpit.getVisitors(start, end).entrySet()) {
