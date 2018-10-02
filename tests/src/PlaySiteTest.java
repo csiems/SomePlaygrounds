@@ -1,3 +1,4 @@
+import base.Playground;
 import components.BallPitSite;
 import components.DoubleSwingSite;
 import org.junit.jupiter.api.Test;
@@ -5,6 +6,8 @@ import utils.Kid;
 import utils.Ticket;
 
 import java.time.ZoneId;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -209,7 +212,49 @@ class PlaySiteTest {
         int result = ballpit.getVisitors(start, end).entries().size();
 
         assertEquals(6, result);
+    }
 
+    @Test
+    void getVisitorsAsList_ProperlySortsListAccordingToEntryTime_KidsAreInListAccordingToTimeAdded()
+            throws InterruptedException{
+        int pause = 50;
+        Playground playground = new Playground();
+        DoubleSwingSite swings = new DoubleSwingSite(1);
+        BallPitSite ballpit = new BallPitSite(2);
+        playground.addPlaySite(swings);
+        playground.addPlaySite(ballpit);
+        Kid kidA = new Kid("Rasmus", 5,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidB = new Kid("Hanna", 4,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidC = new Kid("Helgi", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidD = new Kid("Kaspar", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+        Kid kidE = new Kid("Artjom", 3,
+                new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+
+        swings.addKid(kidA);
+        Thread.sleep(pause);
+        ballpit.addKid(kidB);
+        Thread.sleep(pause);
+        swings.addKid(kidC);
+        Thread.sleep(pause);
+        ballpit.addKid(kidD);
+        Thread.sleep(pause);
+        swings.addKid(kidE);
+        Thread.sleep(pause);
+
+        List<Kid> expected = new ArrayList<>();
+        expected.add(kidA);
+        expected.add(kidB);
+        expected.add(kidC);
+        expected.add(kidD);
+        expected.add(kidE);
+
+        List<Kid> result = playground.getVisitorsAsList();
+
+        assertEquals(expected, result);
     }
 
 }

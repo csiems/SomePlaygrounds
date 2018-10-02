@@ -103,7 +103,13 @@ public abstract class PlaySite {
 
     }
 
+    /**
+     * Calculates the utilization rate of current users (i.e. onsite
+     * users as a percentage of site capacity).
+     * @return A double representing the percentage utilized
+     */
     public abstract double getCurrentUtilizationStat();
+
 
     public abstract double getUtilizationSnapShot(long start, long end);
 

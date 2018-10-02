@@ -6,6 +6,7 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 import components.PlaySite;
 import utils.Kid;
+import utils.Visit;
 
 import java.util.*;
 
@@ -87,32 +88,46 @@ public class Playground {
 
     /**
      * Iterates through a playground's play sites, grabs their current
-     * visitors and adds them to a map sorted by entry time.
+     * visitors and adds them to a list sorted by entry time.
      * @return A map of current visitors to a playground sorted by
      *         entry time.
      */
-    public List<Kid> getCurrentVisitors() {
+
+    /**
+     * Calculates the utilization rate of current users (i.e. onsite
+     * users as a percentage of playground capacity).
+     * @return A double representing the percentage utilized
+     */
+    public double getCurrentUtilizationStat() {
         List<Kid> historicalVisitors = getVisitorsAsList();
         List<Kid> currentVisitors = new ArrayList<>();
 
         for (Kid kid : historicalVisitors) {
-            if (kid.getCurrentVisit() != null) {
+            if (kid.getCurrentVisit() != null
+                    && kid.getCurrentVisit().getStatus() == Visit.Status.ONSITE) {
                 currentVisitors.add(kid);
             }
         }
-        return currentVisitors;
+        return currentVisitors.size() * 100.0 / capacity;
     }
+
 
     /**
-     * Calculates the current utilization percentage of a playground.
+     * Calculates the utilization rate (i.e. onsite users as a
+     * percentage of playground capacity) of a given range.
      * @return A double representing the percentage utilized
      */
-    public double getCurrentUtilizationStat() {
-        return getCurrentVisitors().size() * 100.0 / capacity;
-    }
-
     public double getUtilizationSnapShot(long start, long end) {
-        return getVisitorsAsList(start, end).size() * 100.0 / capacity;
+        List<Kid> historicalVisitors = getVisitorsAsList(start, end);
+        List<Kid> visitorsOnsite = new ArrayList<>();
+
+        for (Kid kid : historicalVisitors) {
+            if (kid.getCurrentVisit() != null
+                    && kid.getCurrentVisit().getStatus() == Visit.Status.ONSITE) {
+                visitorsOnsite.add(kid);
+            }
+        }
+        return visitorsOnsite.size() * 100.0 / capacity;
     }
 
 }

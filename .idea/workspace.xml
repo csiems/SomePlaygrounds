@@ -2,24 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="291f9340-bd5e-4342-a25e-766bb301bd68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SomePlaygrounds.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SomePlaygrounds.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SomePlaygrounds_jar/SomePlaygrounds.jar" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/SomePlaygrounds_jar/SomePlaygrounds.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SomePlaygrounds/base/Playground.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SomePlaygrounds/base/Playground.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SomePlaygrounds/components/BallPitSite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SomePlaygrounds/components/BallPitSite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SomePlaygrounds/components/CarouselSite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SomePlaygrounds/components/CarouselSite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SomePlaygrounds/components/DoubleSwingSite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SomePlaygrounds/components/DoubleSwingSite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SomePlaygrounds/components/PlaySite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SomePlaygrounds/components/PlaySite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SomePlaygrounds/components/SlideSite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SomePlaygrounds/components/SlideSite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/tests/PlaySiteTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/tests/PlaySiteTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/base/Playground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Playground.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/BallPitSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/BallPitSite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CarouselSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CarouselSite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DoubleSwingSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DoubleSwingSite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/PlaySite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/PlaySite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/SlideSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SlideSite.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/src/PlayGroundTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/PlayGroundTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/src/PlaySiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/src/PlaySiteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tests.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,16 +19,16 @@
     <SUITE FILE_PATH="coverage/SomePlaygrounds$VisitTest.ic" NAME="VisitTest Coverage Results" MODIFIED="1538250086254" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests__3_.ic" NAME="All in tests (3) Coverage Results" MODIFIED="1538369276766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$DoubleSwingSiteTest.ic" NAME="DoubleSwingSiteTest Coverage Results" MODIFIED="1538252067958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/SomePlaygrounds$PlayGroundTest.ic" NAME="PlayGroundTest Coverage Results" MODIFIED="1538351761460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SomePlaygrounds$PlayGroundTest.ic" NAME="PlayGroundTest Coverage Results" MODIFIED="1538452627145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_SomePlaygrounds.ic" NAME="All in SomePlaygrounds Coverage Results" MODIFIED="1538355353410" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$KidTest.ic" NAME="KidTest Coverage Results" MODIFIED="1538251352186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests__5_.ic" NAME="All in tests (5) Coverage Results" MODIFIED="1538368704674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests.ic" NAME="All in tests Coverage Results" MODIFIED="1538445185159" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests__1_.ic" NAME="All in tests (1) Coverage Results" MODIFIED="1538451197342" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests__1_.ic" NAME="All in tests (1) Coverage Results" MODIFIED="1538452873314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests__4_.ic" NAME="All in tests (4) Coverage Results" MODIFIED="1538445014191" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_SomePlaygrounds__1_.ic" NAME="All in SomePlaygrounds (1) Coverage Results" MODIFIED="1538355634440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$PlaySiteTest.ic" NAME="PlaySiteTest Coverage Results" MODIFIED="1538356890535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests__2_.ic" NAME="All in tests (2) Coverage Results" MODIFIED="1538369116593" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests__2_.ic" NAME="All in tests (2) Coverage Results" MODIFIED="1538453412287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageOptionsProvider">
     <option name="myAddOrReplace" value="0" />
@@ -60,12 +47,12 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="8" />
-          <entry key="java" value="19816" />
+          <entry key="java" value="20276" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="19816" />
+          <entry key="JAVA" value="20276" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -74,8 +61,8 @@
           <entry key="class" value="1" />
           <entry key="groovy" value="1" />
           <entry key="iml" value="2" />
-          <entry key="java" value="106" />
-          <entry key="xml" value="2" />
+          <entry key="java" value="112" />
+          <entry key="xml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -83,19 +70,19 @@
           <entry key="CLASS" value="1" />
           <entry key="Groovy" value="1" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="106" />
-          <entry key="XML" value="2" />
+          <entry key="JAVA" value="112" />
+          <entry key="XML" value="4" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/base/Playground.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="79" column="62" lean-forward="true" selection-start-line="79" selection-start-column="62" selection-end-line="79" selection-end-column="62" />
+            <state relative-caret-position="148">
+              <caret line="120" selection-start-line="120" selection-end-line="129" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -106,14 +93,36 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/PlaySite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+            <state relative-caret-position="283">
+              <caret line="112" selection-start-line="112" selection-end-line="112" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
-                <element signature="e#641#642#0" expanded="true" />
-                <element signature="e#700#701#0" expanded="true" />
-                <element signature="e#741#742#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/BallPitSite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#598#599#0" expanded="true" />
+                <element signature="e#657#658#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/src/PlayGroundTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-182">
+              <caret line="173" column="5" selection-start-line="173" selection-start-column="5" selection-end-line="173" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,15 +182,15 @@
         <option value="$PROJECT_DIR$/tests/src/VisitTest.java" />
         <option value="$PROJECT_DIR$/src/utils/Ticket.java" />
         <option value="$PROJECT_DIR$/src/utils/Visit.java" />
-        <option value="$PROJECT_DIR$/tests/src/PlayGroundTest.java" />
         <option value="$PROJECT_DIR$/src/utils/Kid.java" />
         <option value="$PROJECT_DIR$/src/components/CarouselSite.java" />
         <option value="$PROJECT_DIR$/src/components/SlideSite.java" />
         <option value="$PROJECT_DIR$/src/components/DoubleSwingSite.java" />
-        <option value="$PROJECT_DIR$/src/components/BallPitSite.java" />
-        <option value="$PROJECT_DIR$/src/components/PlaySite.java" />
         <option value="$PROJECT_DIR$/tests/src/PlaySiteTest.java" />
+        <option value="$PROJECT_DIR$/tests/src/PlayGroundTest.java" />
         <option value="$PROJECT_DIR$/src/base/Playground.java" />
+        <option value="$PROJECT_DIR$/src/components/PlaySite.java" />
+        <option value="$PROJECT_DIR$/src/components/BallPitSite.java" />
       </list>
     </option>
   </component>
@@ -207,18 +216,7 @@
             <path>
               <item name="SomePlaygrounds" type="b2602c69:ProjectViewProjectNode" />
               <item name="SomePlaygrounds" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SomePlaygrounds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SomePlaygrounds" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SomePlaygrounds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SomePlaygrounds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SomePlaygrounds" type="b2602c69:ProjectViewProjectNode" />
@@ -259,7 +257,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538452142355" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538453512542" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -325,10 +323,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="KidTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlayGroundTest.getVisitorsAsList_ReturnsFilteredList_HistoricalVisitorsListSizeIsSeven" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tests" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="KidTest" />
+      <option name="MAIN_CLASS_NAME" value="PlayGroundTest" />
+      <option name="METHOD_NAME" value="getVisitorsAsList_ReturnsFilteredList_HistoricalVisitorsListSizeIsSeven" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -342,19 +342,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.All in tests" />
-      <item itemvalue="JUnit.KidTest" />
       <item itemvalue="JUnit.PlaySiteTest" />
       <item itemvalue="JUnit.All in tests (1)" />
+      <item itemvalue="JUnit.PlayGroundTest.getVisitorsAsList_ReturnsFilteredList_HistoricalVisitorsListSizeIsSeven" />
+      <item itemvalue="JUnit.All in tests" />
       <item itemvalue="JUnit.All in tests (2)" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in tests (2)" />
+        <item itemvalue="JUnit.All in tests" />
         <item itemvalue="JUnit.All in tests (1)" />
         <item itemvalue="JUnit.PlaySiteTest" />
-        <item itemvalue="JUnit.KidTest" />
-        <item itemvalue="JUnit.All in tests" />
+        <item itemvalue="JUnit.PlayGroundTest.getVisitorsAsList_ReturnsFilteredList_HistoricalVisitorsListSizeIsSeven" />
       </list>
     </recent_temporary>
   </component>
@@ -372,35 +372,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_tests - 2018.09.30 at 21h 42m 56s.xml">
-      <configuration name="All in tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_tests_(2) - 2018.09.30 at 21h 43m 27s.xml">
-      <configuration name="All in tests (2)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_tests_(2) - 2018.09.30 at 21h 44m 11s.xml">
-      <configuration name="All in tests (2)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_tests_(2) - 2018.09.30 at 21h 45m 19s.xml">
-      <configuration name="All in tests (2)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_tests_(3) - 2018.09.30 at 21h 48m 01s.xml">
-      <configuration name="All in tests (3)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_tests_(4) - 2018.10.01 at 18h 50m 20s.xml">
-      <configuration name="All in tests (4)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_tests - 2018.10.01 at 18h 53m 10s.xml">
-      <configuration name="All in tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PlaySiteTest - 2018.10.01 at 20h 07m 46s.xml">
-      <configuration name="PlaySiteTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="PlaySiteTest - 2018.10.01 at 20h 11m 44s.xml">
       <configuration name="PlaySiteTest" configurationId="JUnit" />
     </history-entry>
     <history-entry file="All_in_tests_(1) - 2018.10.01 at 20h 33m 23s.xml">
       <configuration name="All in tests (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_tests_(2) - 2018.10.01 at 20h 49m 16s.xml">
+      <configuration name="All in tests (2)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayGroundTest - 2018.10.01 at 20h 57m 10s.xml">
+      <configuration name="PlayGroundTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayGroundTest_getVisitorsAsList_ReturnsFilteredList_HistoricalVisitorsListSizeIsSeven - 2018.10.01 at 20h 57m 51s.xml">
+      <configuration name="PlayGroundTest.getVisitorsAsList_ReturnsFilteredList_HistoricalVisitorsListSizeIsSeven" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlayGroundTest_getVisitorsAsList_ReturnsFilteredList_HistoricalVisitorsListSizeIsSeven - 2018.10.01 at 20h 58m 44s.xml">
+      <configuration name="PlayGroundTest.getVisitorsAsList_ReturnsFilteredList_HistoricalVisitorsListSizeIsSeven" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PlaySiteTest - 2018.10.01 at 20h 59m 00s.xml">
+      <configuration name="PlaySiteTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_tests_(1) - 2018.10.01 at 20h 59m 57s.xml">
+      <configuration name="All in tests (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_tests_(1) - 2018.10.01 at 21h 01m 19s.xml">
+      <configuration name="All in tests (1)" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_tests_(2) - 2018.10.01 at 21h 10m 18s.xml">
+      <configuration name="All in tests (2)" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -421,7 +421,7 @@
       <window_info id="UI Designer" />
       <window_info id="Capture Tool" />
       <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2358643" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22294022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" sideWeight="0.4983845" weight="0.32876712" />
@@ -429,7 +429,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.32876712" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" weight="0.33835617" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.33835617" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -594,13 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/Ticket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/DoubleSwingSite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -621,26 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/BallPitSite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="33" column="75" selection-start-line="33" selection-start-column="75" selection-end-line="33" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/src/PlayGroundTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="80" column="40" lean-forward="true" selection-start-line="80" selection-start-column="40" selection-end-line="80" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/SlideSite.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="305">
@@ -651,33 +624,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/src/PlaySiteTest.java">
+    <entry file="file://$PROJECT_DIR$/.idea/artifacts/SomePlaygrounds_jar.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/uiDesigner.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/Ticket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2777">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        <state relative-caret-position="35">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/PlaySite.java">
+    <entry file="file://$PROJECT_DIR$/tests/src/PlaySiteTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="12" column="42" lean-forward="true" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+        <state relative-caret-position="3630">
+          <caret line="242" selection-start-line="242" selection-end-line="242" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-            <element signature="e#700#701#0" expanded="true" />
-            <element signature="e#741#742#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/src/PlayGroundTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-182">
+          <caret line="173" column="5" selection-start-line="173" selection-start-column="5" selection-end-line="173" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/base/Playground.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="79" column="62" lean-forward="true" selection-start-line="79" selection-start-column="62" selection-end-line="79" selection-end-column="62" />
+        <state relative-caret-position="148">
+          <caret line="120" selection-start-line="120" selection-end-line="129" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/PlaySite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="283">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/BallPitSite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="44" column="8" selection-start-line="44" selection-start-column="8" selection-end-line="44" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#598#599#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
           </folding>
         </state>
       </provider>
