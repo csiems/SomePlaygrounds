@@ -8,8 +8,11 @@ import utils.Kid;
 import utils.Ticket;
 import utils.Visit;
 
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.*;
+import java.util.function.Consumer;
+
 import com.google.common.collect.Multimap;
 
 public abstract class PlaySite {
@@ -95,12 +98,51 @@ public abstract class PlaySite {
         return kidsOnQueue.size();
     }
 
+    /**
+     * Finds all kids (onsite and onqueue) whose visit
+     * overlaps a given range.
+     * <b>Warning: If the same kid uses a site multiple times in
+     * within the given range they will be counted more than once.</b>
+     * @param start The start of the range
+     * @param end The end of the range
+     * @return Map of kids whose visit overlaps range.
+     */
     public Multimap<Long, Kid> getVisitors(long start, long end) {
-
+        // Grab map of all visitors
         Multimap<Long, Kid> visitors = getVisitors();
-        Range<Long> filter = Range.closed(start, end);
-        return Multimaps.filterKeys(visitors, filter);
 
+        // Create map of visitors whose start time is in range
+        Range<Long> filter = Range.closed(start, end);
+        Multimap<Long, Kid> startInRange = Multimaps.filterKeys(visitors, filter);
+
+        // Create map of visitors whose exit time is in range
+        Multimap<Long, Kid> exitInRange = Multimaps.newMultimap(
+                new TreeMap<Long, Collection<Kid>>(),
+                (Supplier<List<Kid>>) Lists::newArrayList
+        );
+        for (Map.Entry<Long, Kid> entry : visitors.entries()) {
+            List<Visit> visits = entry.getValue().getVisits();
+
+            for (Visit visit : visits) {
+                LocalDateTime exitDateTime = visit.getTimeExited();
+                Long exitTime = exitDateTime == null ? 0 : exitDateTime
+                        .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
+                if (start <= exitTime && exitTime <= end) {
+                    exitInRange.put(entry.getKey(), entry.getValue());
+                }
+            }
+        }
+
+        Multimap<Long, Kid> combinedMap = Multimaps.newMultimap(
+                new TreeMap<Long, Collection<Kid>>(),
+                (Supplier<List<Kid>>) Lists::newArrayList
+        );
+
+        // combine the maps
+        combinedMap.putAll(exitInRange);
+        combinedMap.putAll(startInRange);
+
+        return combinedMap;
     }
 
     /**
@@ -110,7 +152,11 @@ public abstract class PlaySite {
      */
     public abstract double getCurrentUtilizationStat();
 
-
+    /**
+     * Calculates the utilization rate (i.e. onsite users as a
+     * percentage of site capacity) of a given range.
+     * @return A double representing the percentage utilized
+     */
     public abstract double getUtilizationSnapShot(long start, long end);
 
 }

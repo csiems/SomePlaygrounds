@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 import utils.Kid;
 import utils.Ticket;
 
+import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
 import java.util.List;
@@ -82,7 +83,7 @@ public class PlayGroundTest {
     }
 
     @Test
-    void getVisitorsAsList_ReturnsFilteredList_HistoricalVisitorsListSizeIsSeven() throws InterruptedException{
+    void getVisitorsAsList_ReturnsFilteredList_FilteredVisitorsListSizeIsFour() throws InterruptedException{
         int pause = 50;
         Playground playground = new Playground();
         DoubleSwingSite swings = new DoubleSwingSite(1);
@@ -108,10 +109,12 @@ public class PlayGroundTest {
         swings.addKid(kidA);
         Thread.sleep(pause);
         ballpit.addKid(kidB);
+        Thread.sleep(pause);
         swings.addKid(kidC);
+        Thread.sleep(pause);
         swings.removeKid(kidA);
+        Thread.sleep(pause);
         ballpit.addKid(kidD);
-        swings.addKid(kidA);
         Thread.sleep(pause);
         swings.addKid(kidE);
         Thread.sleep(pause);
@@ -119,16 +122,17 @@ public class PlayGroundTest {
         Thread.sleep(pause);
         swings.addKid(kidG);
         Thread.sleep(pause);
+        swings.removeKid(kidG);
+        Thread.sleep(pause);
         swings.addKid(kidH);
 
-        Long start = kidB.getCurrentVisit().getTimeEntered()
+        Long start = kidD.getCurrentVisit().getTimeEntered()
                 .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
         Long end = kidG.getCurrentVisit().getTimeEntered()
                 .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
-
         List<Kid> result = playground.getVisitorsAsList(start, end);
 
-        assertEquals(7, result.size());
+        assertEquals(4, result.size());
     }
 
     @Test
