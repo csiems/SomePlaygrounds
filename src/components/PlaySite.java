@@ -81,6 +81,12 @@ public abstract class PlaySite {
         return kidsOnQueue.size();
     }
 
+    /**
+     * Removes a kid from a play site and advances the next kid in the queue
+     * if one is available.
+     * @param kid Kid to be removed
+     * @return Remaining size of the queue.
+     */
     public int removeKid(Kid kid) {
         if (kidsOnSite.contains(kid)) {
             kidsOnSite.remove(kid);
@@ -99,8 +105,7 @@ public abstract class PlaySite {
     }
 
     /**
-     * Finds all kids (onsite and onqueue) whose visit
-     * overlaps a given range.
+     * Finds all kids (onsite and onqueue) whose visit overlaps a given range.
      * <b>Warning: If the same kid uses a site multiple times in
      * within the given range they will be counted more than once.</b>
      * @param start The start of the range

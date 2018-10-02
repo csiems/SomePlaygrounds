@@ -38,8 +38,7 @@ public class Playground {
     }
 
     /**
-     * Iterates through the historical visitor list of every site in
-     * a playground and adds utils.Kid to a map sorted by time of entry.
+     * Returns a map of all visitors to playground's play sites.
      * @return Map of visitors sorted by time of entry
      */
     public Multimap<Long, Kid> getVisitors() {
@@ -56,6 +55,12 @@ public class Playground {
         return combinedMap;
     }
 
+    /**
+     * Returns a map of all visitors whose visit overlaps a given range.
+     * @param start Start time in milliseconds
+     * @param end End time in milliseconds
+     * @return
+     */
     public Multimap<Long, Kid> getVisitors(long start, long end) {
         Multimap<Long, Kid> combinedMap = Multimaps.newMultimap(
                 new TreeMap<Long, Collection<Kid>>(),
@@ -70,6 +75,10 @@ public class Playground {
         return combinedMap;
     }
 
+    /**
+     * Returns a list of all visitors to a playground's play sites.
+     * @return A list of visitors
+     */
     public List<Kid> getVisitorsAsList() {
         List<Kid> visitorsList = new ArrayList<>();
         for (Map.Entry<Long, Kid> entry : getVisitors().entries()) {
@@ -78,6 +87,13 @@ public class Playground {
         return visitorsList;
     }
 
+    /**
+     * Returns a list of all visitors to a playground's play sites
+     * within a given range
+     * @param start Start time in milliseconds
+     * @param end End time in milliseconds
+     * @return
+     */
     public List<Kid> getVisitorsAsList(long start, long end) {
         List<Kid> visitorsList = new ArrayList<>();
         for (Map.Entry<Long, Kid> entry : getVisitors(start, end).entries()) {
@@ -87,15 +103,8 @@ public class Playground {
     }
 
     /**
-     * Iterates through a playground's play sites, grabs their current
-     * visitors and adds them to a list sorted by entry time.
-     * @return A map of current visitors to a playground sorted by
-     *         entry time.
-     */
-
-    /**
-     * Calculates the utilization rate of current users (i.e. onsite
-     * users as a percentage of playground capacity).
+     * Calculates the utilization rate of current onsite and
+     * onqueue users as a percentage of playground capacity).
      * @return A double representing the percentage utilized
      */
     public double getCurrentUtilizationStat() {
@@ -103,31 +112,20 @@ public class Playground {
         List<Kid> currentVisitors = new ArrayList<>();
 
         for (Kid kid : historicalVisitors) {
-            if (kid.getCurrentVisit() != null
-                    && kid.getCurrentVisit().getStatus() == Visit.Status.ONSITE) {
+            if (kid.getCurrentVisit() != null) {
                 currentVisitors.add(kid);
             }
         }
         return currentVisitors.size() * 100.0 / capacity;
     }
 
-
     /**
-     * Calculates the utilization rate (i.e. onsite users as a
-     * percentage of playground capacity) of a given range.
+     * Calculates the utilization rate of onsite and onqueue users as a
+     * percentage of playground capacity within a given range.
      * @return A double representing the percentage utilized
      */
     public double getUtilizationSnapShot(long start, long end) {
-        List<Kid> historicalVisitors = getVisitorsAsList(start, end);
-        List<Kid> visitorsOnsite = new ArrayList<>();
-
-        for (Kid kid : historicalVisitors) {
-            if (kid.getCurrentVisit() != null
-                    && kid.getCurrentVisit().getStatus() == Visit.Status.ONSITE) {
-                visitorsOnsite.add(kid);
-            }
-        }
-        return visitorsOnsite.size() * 100.0 / capacity;
+        return getVisitorsAsList(start, end).size() * 100.0 / capacity;
     }
 
 }
