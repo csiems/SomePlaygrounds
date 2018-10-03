@@ -9,7 +9,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* Import the latest JAR from 'Releases' tab: [https://github.com/csiems/SomePlaygrounds/releases] and add a dependency.
+* Import the latest JAR from 'Releases' tab: [https://github.com/csiems/SomePlaygrounds/releases] and add as a dependency to your project.
 
 ## Using the SomePlaygrounds library
 
@@ -24,7 +24,6 @@ SlideSite slides = new SlideSite(2); // int is number of slides
 playground.add(swings);
 playground.add(ballpit);
 playground.add(slides);
-
 
 // Creating kids to add to and remove from sites
 Kid rasmus = new Kid("Rasmus", 5,
