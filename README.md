@@ -9,8 +9,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* Import the latest JAR from 'Releases' tab: [https://github.com/csiems/SomePlaygrounds/releases]
-(https://github.com/csiems/SomePlaygrounds/releases) and add a dependency.
+* Import the latest JAR from 'Releases' tab: [https://github.com/csiems/SomePlaygrounds/releases] and add a dependency.
 
 ## Using the SomePlaygrounds library
 
@@ -27,6 +26,35 @@ playground.add(ballpit);
 playground.add(slides);
 
 
+// Creating kids to add to and remove from sites
+Kid rasmus = new Kid("Rasmus", 5,
+        new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+Kid hanna = new Kid("Hanna", 4,
+        new Ticket(Ticket.Type.GENERAL, 100000000L), true);
+Kid helgi = new Kid("Helgi", 3,
+        new Ticket(Ticket.Type.VIP, 100000000L), true);
+
+swings.addKid(rasmus);
+ballpit.addKid(hanna);
+slides.addKid(helgi);
+swings.removeKid(rasmus);
+
+// Get kid entry and exit stats
+rasmus.getCurrentVisit().getTimeEntered();
+rasmus.getCurrentVisit().getTimeExited();
+rasmus.getCurrentVisit().getVisitLength();
+
+// Get list of all visitors
+playground.getVisitorsAsList();
+
+// Get list of visitors within specific range
+playground.getVisitorsAsList(start, end);
+
+// Get current utilization statistics
+playground.getCurrentUtilizationStat();
+
+// Get utilization statistics within a specific range
+getUtilizationSnapShot(start, end);
 
 ```
 
