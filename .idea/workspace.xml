@@ -6,17 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="291f9340-bd5e-4342-a25e-766bb301bd68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/SomePlaygrounds_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/SomePlaygrounds_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SomePlaygrounds.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SomePlaygrounds.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/SomePlaygrounds_jar/SomePlaygrounds.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SomePlaygrounds/base/Playground.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SomePlaygrounds/base/Playground.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SomePlaygrounds/components/PlaySite.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SomePlaygrounds/components/PlaySite.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SomePlaygrounds/models/Visit$Status.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SomePlaygrounds/models/Visit$Status.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SomePlaygrounds/models/Visit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SomePlaygrounds/models/Visit.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/DoubleSwingSite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/DoubleSwingSite.java" afterDir="false" />
-    </list>
+    <list default="true" id="291f9340-bd5e-4342-a25e-766bb301bd68" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +23,7 @@
     <SUITE FILE_PATH="coverage/SomePlaygrounds$KidTest.ic" NAME="KidTest Coverage Results" MODIFIED="1538251352186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests__5_.ic" NAME="All in tests (5) Coverage Results" MODIFIED="1538463892354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests.ic" NAME="All in tests Coverage Results" MODIFIED="1538527833866" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
-    <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests__1_.ic" NAME="All in tests (1) Coverage Results" MODIFIED="1538465004244" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests__1_.ic" NAME="All in tests (1) Coverage Results" MODIFIED="1538534540350" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_tests__4_.ic" NAME="All in tests (4) Coverage Results" MODIFIED="1538465305902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$All_in_SomePlaygrounds__1_.ic" NAME="All in SomePlaygrounds (1) Coverage Results" MODIFIED="1538355634440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/SomePlaygrounds$PlaySiteTest.ic" NAME="PlaySiteTest Coverage Results" MODIFIED="1538356890535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
@@ -91,8 +81,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/src/DoubleSwingSiteTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+            <state relative-caret-position="120">
+              <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -232,25 +222,20 @@
             <path>
               <item name="SomePlaygrounds" type="b2602c69:ProjectViewProjectNode" />
               <item name="SomePlaygrounds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SomePlaygrounds" type="b2602c69:ProjectViewProjectNode" />
               <item name="SomePlaygrounds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="base" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SomePlaygrounds" type="b2602c69:ProjectViewProjectNode" />
               <item name="SomePlaygrounds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SomePlaygrounds" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SomePlaygrounds" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
+              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
+              <item name="SomePlaygrounds_jar" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SomePlaygrounds" type="b2602c69:ProjectViewProjectNode" />
@@ -276,9 +261,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="someplaygrounds" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538534270900" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1538534621869" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Groovy JUnit" value="groovy.util.GroovyTestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
@@ -320,7 +309,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DoubleSwingSiteTest">
+  <component name="RunManager" selected="JUnit.All in tests (1)">
+    <configuration name="All in tests (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="tests" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in tests (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tests" />
       <option name="PACKAGE_NAME" value="" />
@@ -330,14 +327,6 @@
       </method>
     </configuration>
     <configuration name="All in tests (3)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="tests" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in tests (5)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="tests" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
@@ -363,18 +352,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in tests (3)" />
-      <item itemvalue="JUnit.All in tests (5)" />
       <item itemvalue="JUnit.All in tests" />
       <item itemvalue="JUnit.All in tests (2)" />
       <item itemvalue="JUnit.DoubleSwingSiteTest" />
+      <item itemvalue="JUnit.All in tests (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in tests (1)" />
         <item itemvalue="JUnit.DoubleSwingSiteTest" />
         <item itemvalue="JUnit.All in tests (3)" />
         <item itemvalue="JUnit.All in tests (2)" />
         <item itemvalue="JUnit.All in tests" />
-        <item itemvalue="JUnit.All in tests (5)" />
       </list>
     </recent_temporary>
   </component>
@@ -392,12 +381,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_tests_(3) - 2018.10.02 at 00h 27m 44s.xml">
-      <configuration name="All in tests (3)" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_in_tests_(3) - 2018.10.02 at 00h 28m 18s.xml">
-      <configuration name="All in tests (3)" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="All_in_tests_(4) - 2018.10.02 at 00h 28m 31s.xml">
       <configuration name="All in tests (4)" configurationId="JUnit" />
     </history-entry>
@@ -422,6 +405,12 @@
     <history-entry file="DoubleSwingSiteTest - 2018.10.02 at 19h 37m 22s.xml">
       <configuration name="DoubleSwingSiteTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="DoubleSwingSiteTest - 2018.10.02 at 19h 37m 43s.xml">
+      <configuration name="DoubleSwingSiteTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_tests_(1) - 2018.10.02 at 19h 42m 26s.xml">
+      <configuration name="All in tests (1)" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -436,7 +425,7 @@
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2180937" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2180937" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -445,7 +434,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32876712" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.33835617" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49919224" visible="true" weight="0.33835617" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -745,8 +734,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/src/DoubleSwingSiteTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="22" column="39" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="39" />
+        <state relative-caret-position="120">
+          <caret line="11" column="46" lean-forward="true" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
         </state>
       </provider>
     </entry>
