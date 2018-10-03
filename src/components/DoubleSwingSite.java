@@ -1,13 +1,5 @@
 package components;
 
-import com.google.common.collect.Multimap;
-import utils.Kid;
-import utils.Visit;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 public class DoubleSwingSite extends PlaySite {
 
     private int numberOfSwings;
@@ -44,12 +36,6 @@ public class DoubleSwingSite extends PlaySite {
         } else {
             numberOfSwings = 0;
         }
-    }
-
-    @Override
-    public int getCapacity() {
-        // Each double swing in the site can hold two children
-        return numberOfSwings * 2;
     }
 
     @Override

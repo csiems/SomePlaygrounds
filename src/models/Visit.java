@@ -1,4 +1,4 @@
-package utils;
+package models;
 
 import components.PlaySite;
 
@@ -40,7 +40,6 @@ public class Visit {
         return timeEntered;
     }
 
-
     public LocalDateTime getTimeExited() {
         return timeExited;
     }
@@ -72,7 +71,7 @@ public class Visit {
 
     @Override
     public String toString() {
-        return "utils.Visit{" +
+        return "models.Visit{" +
                 "site=" + site +
                 ", status='" + status + '\'' +
                 ", timeEntered=" + timeEntered +

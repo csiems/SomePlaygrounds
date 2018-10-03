@@ -2,8 +2,8 @@ import base.Playground;
 import components.BallPitSite;
 import components.DoubleSwingSite;
 import org.junit.jupiter.api.Test;
-import utils.Kid;
-import utils.Ticket;
+import models.Kid;
+import models.Ticket;
 
 import java.time.ZoneId;
 import java.util.ArrayList;

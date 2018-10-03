@@ -5,8 +5,7 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.Multimaps;
 import components.PlaySite;
-import utils.Kid;
-import utils.Visit;
+import models.Kid;
 
 import java.util.*;
 
@@ -19,6 +18,11 @@ public class Playground {
         capacity = 0;
     }
 
+    /**
+     * Adds a play site to a playground and updates
+     * playground capacity
+     * @param playSite The play site to be added
+     */
     public void addPlaySite(PlaySite playSite) {
         if (!playSites.contains(playSite)) {
             playSites.add(playSite);
@@ -26,6 +30,11 @@ public class Playground {
         }
     }
 
+    /**
+     * Removes a play site from a playground and updates
+     * playground capacity
+     * @param playSite The play site to be removed
+     */
     public void removePlaySite(PlaySite playSite) {
         if (playSites.contains(playSite)) {
             playSites.remove(playSite);
@@ -38,7 +47,7 @@ public class Playground {
     }
 
     /**
-     * Returns a map of all visitors to playground's play sites.
+     * Returns a map of all historical visitors to playground's play sites.
      * @return Map of visitors sorted by time of entry
      */
     public Multimap<Long, Kid> getVisitors() {
@@ -59,7 +68,7 @@ public class Playground {
      * Returns a map of all visitors whose visit overlaps a given range.
      * @param start Start time in milliseconds
      * @param end End time in milliseconds
-     * @return
+     * @return List of visitors within range
      */
     public Multimap<Long, Kid> getVisitors(long start, long end) {
         Multimap<Long, Kid> combinedMap = Multimaps.newMultimap(

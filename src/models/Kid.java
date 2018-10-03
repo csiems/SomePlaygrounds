@@ -1,4 +1,4 @@
-package utils;
+package models;
 
 import components.PlaySite;
 
@@ -95,7 +95,7 @@ public class Kid {
 
     @Override
     public String toString() {
-        return "utils.Kid{" +
+        return "models.Kid{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", ticket=" + ticket +

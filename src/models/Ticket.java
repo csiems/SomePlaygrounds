@@ -1,4 +1,4 @@
-package utils;
+package models;
 
 import java.util.Objects;
 
@@ -64,7 +64,7 @@ public class Ticket {
 
     @Override
     public String toString() {
-        return "utils.Ticket{" +
+        return "models.Ticket{" +
                 "type=" + type +
                 ", number=" + number +
                 '}';

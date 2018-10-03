@@ -4,26 +4,25 @@ import com.google.common.base.Supplier;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimaps;
 import com.google.common.collect.Range;
-import utils.Kid;
-import utils.Ticket;
-import utils.Visit;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.*;
-import java.util.function.Consumer;
 
 import com.google.common.collect.Multimap;
+import models.Kid;
+import models.Ticket;
+import models.Visit;
 
 public abstract class PlaySite {
 
-    protected int capacity = 0;
-    protected Deque<Kid> kidsOnSite = new ArrayDeque<>();
-    protected Deque<Kid> kidsOnQueue = new ArrayDeque<>();
-    protected int vipCounter = 0;
-    protected int generalCounter = 0;
-    protected Multimap<Long, Kid> allVisitors = Multimaps.newMultimap(
-            new TreeMap<Long, Collection<Kid>>(),
+    int capacity = 0;
+    Deque<Kid> kidsOnSite = new ArrayDeque<>();
+    private Deque<Kid> kidsOnQueue = new ArrayDeque<>();
+    private int vipCounter = 0;
+    private int generalCounter = 0;
+    private Multimap<Long, Kid> allVisitors = Multimaps.newMultimap(
+            new TreeMap<>(),
             (Supplier<List<Kid>>) Lists::newArrayList
     );
 
@@ -39,8 +38,14 @@ public abstract class PlaySite {
         return kidsOnQueue;
     }
 
+    /**
+     * Adds a kid to a site if capacity or queue if not. Also handles queueing
+     * for VIPS/General Admissions
+     * @param kid Kid to be added to site/queue
+     * @return Size of queue after child is added, or -1 if child not added
+     */
     public synchronized int addKid(Kid kid) {
-        if (kidsOnSite.size() < capacity && !kidsOnSite.contains(kid) && !kidsOnQueue.contains(kid)) {
+        if (kidsOnSite.size() < capacity && !kidsOnSite.contains(kid)) {
             // if space is available add kid to site if kid not already there
             kidsOnSite.addLast(kid);
             // update site visit for kid as well
@@ -58,14 +63,14 @@ public abstract class PlaySite {
             return -1;
         } else if (kid.acceptsQueue() && !kidsOnQueue.contains(kid)) {
             // if kid accepts queue and is not in queue already, add to queue
-            if ((kid.getTicket().getType() == Ticket.Type.VIP) && vipCounter == 0 && kid.getTicket().getSkips() > 0) {
+            if ((kid.getTicket().getType() == Ticket.Type.VIP) && (kid.getTicket().getSkips() > 0) && vipCounter == 0) {
                 // VIP's get added to front of queue (only decrement skip if someone is skipped)
                 if (kidsOnQueue.size() > 0) { kid.getTicket().decrementSkips(); }
                 kidsOnQueue.addFirst(kid);
                 vipCounter++;
                 generalCounter = 0;
             } else {
-                // GENERAL admission gets added to back of queue
+                // GENERAL admission and VIP's when line is on cooldown get added to back of queue
                 kidsOnQueue.addLast(kid);
                 generalCounter++;
                 if (generalCounter > 2) {
@@ -79,7 +84,6 @@ public abstract class PlaySite {
 
     /**
      * Removes a kid from a play site and advances the next kid in the queue
-     * if one is available.
      * @param kid Kid to be removed
      * @return Remaining size of the queue.
      */
@@ -102,7 +106,7 @@ public abstract class PlaySite {
     }
 
     /**
-     * Returns all visitors to site.
+     * Lists all historical onsite visitors.
      * @return Map of kids who have visited site
      */
     public Multimap<Long, Kid> getVisitors() {
@@ -111,7 +115,7 @@ public abstract class PlaySite {
 
     /**
      * Finds all onsite visitors whose visit overlaps a given range.
-     * <b>Warning: If the same kid uses a site multiple times in
+     * <b>Warning: If the same kid uses a site multiple times
      * within the given range they will be counted more than once.</b>
      * @param start The start of the range
      * @param end The end of the range
@@ -143,12 +147,11 @@ public abstract class PlaySite {
             }
         }
 
+        // combine the maps
         Multimap<Long, Kid> combinedMap = Multimaps.newMultimap(
                 new TreeMap<Long, Collection<Kid>>(),
                 (Supplier<List<Kid>>) Lists::newArrayList
         );
-
-        // combine the maps
         combinedMap.putAll(exitInRange);
         combinedMap.putAll(startInRange);
 

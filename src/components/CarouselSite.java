@@ -1,18 +1,22 @@
 package components;
 
-import com.google.common.collect.Multimap;
-import utils.Kid;
-import utils.Visit;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
 public class CarouselSite extends PlaySite {
 
     public CarouselSite(int numberOfAnimals) {
         // Assumes carousel animals can hold only one kid
         this.capacity = numberOfAnimals;
+    }
+
+    public void addAnimals(int additionalAnimals) {
+        capacity += additionalAnimals;
+    }
+
+    public void removeAnimals(int removedAnimals) {
+        if (capacity >= removedAnimals) {
+            capacity -= removedAnimals;
+        } else {
+            capacity = 0;
+        }
     }
 
     @Override

@@ -1,8 +1,8 @@
 import components.BallPitSite;
 import org.junit.jupiter.api.Test;
-import utils.Kid;
-import utils.Ticket;
-import utils.Visit;
+import models.Kid;
+import models.Ticket;
+import models.Visit;
 
 import static org.junit.jupiter.api.Assertions.*;
 
