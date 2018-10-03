@@ -131,7 +131,7 @@ public abstract class PlaySite {
 
         // Create map of visitors whose exit time is in range
         Multimap<Long, Kid> exitInRange = Multimaps.newMultimap(
-                new TreeMap<Long, Collection<Kid>>(),
+                new TreeMap<>(),
                 (Supplier<List<Kid>>) Lists::newArrayList
         );
         for (Map.Entry<Long, Kid> entry : visitors.entries()) {
@@ -139,7 +139,7 @@ public abstract class PlaySite {
 
             for (Visit visit : visits) {
                 LocalDateTime exitDateTime = visit.getTimeExited();
-                Long exitTime = exitDateTime == null ? 0 : exitDateTime
+                long exitTime = (exitDateTime == null) ? 0 : exitDateTime
                         .atZone(ZoneId.systemDefault()).toInstant().toEpochMilli();
                 if (start <= exitTime && exitTime <= end) {
                     exitInRange.put(entry.getKey(), entry.getValue());
@@ -149,7 +149,7 @@ public abstract class PlaySite {
 
         // combine the maps
         Multimap<Long, Kid> combinedMap = Multimaps.newMultimap(
-                new TreeMap<Long, Collection<Kid>>(),
+                new TreeMap<>(),
                 (Supplier<List<Kid>>) Lists::newArrayList
         );
         combinedMap.putAll(exitInRange);

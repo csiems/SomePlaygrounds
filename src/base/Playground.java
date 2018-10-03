@@ -97,11 +97,11 @@ public class Playground {
     }
 
     /**
-     * Returns a list of all visitors to a playground's play sites
+     * Collects a list of all visitors to a playground's play sites
      * within a given range
      * @param start Start time in milliseconds
      * @param end End time in milliseconds
-     * @return
+     * @return List of all visitors within range
      */
     public List<Kid> getVisitorsAsList(long start, long end) {
         List<Kid> visitorsList = new ArrayList<>();

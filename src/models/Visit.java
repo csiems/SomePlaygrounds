@@ -13,7 +13,7 @@ public class Visit {
 
     public enum Status {
         ONSITE,
-        ONQUEUE;
+        ONQUEUE
     }
 
     public Visit(PlaySite site, Status status) {
