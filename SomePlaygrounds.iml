@@ -28,6 +28,15 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="guava-26.0-jre" level="project" />
+    <orderEntry type="library" exported="" name="guava-26.0-jre" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/lib/guava-26.0-jre.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

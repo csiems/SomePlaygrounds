@@ -16,25 +16,31 @@ public class DoubleSwingSite extends PlaySite {
 
     public void addSwing() {
         numberOfSwings += 1;
+        capacity = numberOfSwings * 2;
     }
 
     public void addSwing(int swings) {
         numberOfSwings += swings;
+        capacity = numberOfSwings * 2;
     }
 
     public void removeSwing() {
         if (numberOfSwings > 1) {
             numberOfSwings -= 1;
+            capacity = numberOfSwings * 2;
         } else {
             numberOfSwings = 0;
+            capacity = numberOfSwings * 2;
         }
     }
 
     public void removeSwing(int swings) {
         if (numberOfSwings >= swings) {
             numberOfSwings -= swings;
+            capacity = numberOfSwings * 2;
         } else {
             numberOfSwings = 0;
+            capacity = numberOfSwings * 2;
         }
     }
 
