@@ -4,6 +4,7 @@ import components.PlaySite;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
+import java.util.Objects;
 
 public class Visit {
     private PlaySite site;
@@ -67,6 +68,22 @@ public class Visit {
         } else {
             return -1;
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Visit visit = (Visit) o;
+        return Objects.equals(site, visit.site) &&
+                getStatus() == visit.getStatus() &&
+                Objects.equals(getTimeEntered(), visit.getTimeEntered()) &&
+                Objects.equals(getTimeExited(), visit.getTimeExited());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(site, getStatus(), getTimeEntered(), getTimeExited());
     }
 
     @Override

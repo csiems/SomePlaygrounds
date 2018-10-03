@@ -139,4 +139,25 @@ public class Playground {
         return getVisitorsAsList(start, end).size() * 100.0 / capacity;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Playground that = (Playground) o;
+        return getCapacity() == that.getCapacity() &&
+                Objects.equals(playSites, that.playSites);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(playSites, getCapacity());
+    }
+
+    @Override
+    public String toString() {
+        return "Playground{" +
+                "playSites=" + playSites +
+                ", capacity=" + capacity +
+                '}';
+    }
 }

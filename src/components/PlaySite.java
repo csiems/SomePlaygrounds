@@ -172,4 +172,21 @@ public abstract class PlaySite {
      */
     public abstract double getUtilizationSnapShot(long start, long end);
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PlaySite playSite = (PlaySite) o;
+        return getCapacity() == playSite.getCapacity() &&
+                vipCounter == playSite.vipCounter &&
+                generalCounter == playSite.generalCounter &&
+                Objects.equals(getKidsOnSite(), playSite.getKidsOnSite()) &&
+                Objects.equals(getKidsOnQueue(), playSite.getKidsOnQueue()) &&
+                Objects.equals(allVisitors, playSite.allVisitors);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getCapacity(), getKidsOnSite(), getKidsOnQueue(), vipCounter, generalCounter, allVisitors);
+    }
 }
